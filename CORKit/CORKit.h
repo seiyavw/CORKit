@@ -6,7 +6,6 @@
 //  Copyright (c) 2014年 cor. All rights reserved.
 //
 
-#import "CORApiClient.h"
 #import "CORAudioSlider.h"
 #import "CORBaseViewController.h"
 #import "CORBlendView.h"
