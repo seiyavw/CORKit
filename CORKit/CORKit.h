@@ -15,6 +15,7 @@
 #import "CORWindowView.h"
 
 #import "NSString+COR.h"
+#import "NSDate+COR.h"
 #import "UIDevice+COR.h"
 #import "UIImage+COR.h"
 #import "UINavigationController+COR.h"
