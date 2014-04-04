@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FAE730518EE4C35004CDCA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730418EE4C35004CDCA8 /* Foundation.framework */; };
+		9FAE730718EE4C35004CDCA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730618EE4C35004CDCA8 /* CoreGraphics.framework */; };
+		9FAE730918EE4C35004CDCA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730818EE4C35004CDCA8 /* UIKit.framework */; };
+		9FAE730F18EE4C35004CDCA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FAE730D18EE4C35004CDCA8 /* InfoPlist.strings */; };
+		9FAE731118EE4C35004CDCA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE731018EE4C35004CDCA8 /* main.m */; };
+		9FAE731518EE4C35004CDCA8 /* CKSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE731418EE4C35004CDCA8 /* CKSAppDelegate.m */; };
+		9FAE731718EE4C35004CDCA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FAE731618EE4C35004CDCA8 /* Images.xcassets */; };
+		9FAE731E18EE4C35004CDCA8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE731D18EE4C35004CDCA8 /* XCTest.framework */; };
+		9FAE731F18EE4C35004CDCA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730418EE4C35004CDCA8 /* Foundation.framework */; };
+		9FAE732018EE4C35004CDCA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730818EE4C35004CDCA8 /* UIKit.framework */; };
+		9FAE732818EE4C35004CDCA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FAE732618EE4C35004CDCA8 /* InfoPlist.strings */; };
+		9FAE732A18EE4C35004CDCA8 /* CORKitSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE732918EE4C35004CDCA8 /* CORKitSampleTests.m */; };
+		9FAE735718EE4C5E004CDCA8 /* NSString+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE733718EE4C5E004CDCA8 /* NSString+COR.m */; };
+		9FAE735818EE4C5E004CDCA8 /* UIDevice+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE733918EE4C5E004CDCA8 /* UIDevice+COR.m */; };
+		9FAE735918EE4C5E004CDCA8 /* UIImage+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE733B18EE4C5E004CDCA8 /* UIImage+COR.m */; };
+		9FAE735A18EE4C5E004CDCA8 /* UINavigationController+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE733D18EE4C5E004CDCA8 /* UINavigationController+COR.m */; };
+		9FAE735B18EE4C5E004CDCA8 /* UIStoryboard+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE733F18EE4C5E004CDCA8 /* UIStoryboard+COR.m */; };
+		9FAE735C18EE4C5E004CDCA8 /* UIView+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734118EE4C5E004CDCA8 /* UIView+COR.m */; };
+		9FAE735D18EE4C5E004CDCA8 /* UIViewController+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734318EE4C5E004CDCA8 /* UIViewController+COR.m */; };
+		9FAE735E18EE4C5E004CDCA8 /* CORAudioSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734618EE4C5E004CDCA8 /* CORAudioSlider.m */; };
+		9FAE735F18EE4C5E004CDCA8 /* CORBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734818EE4C5E004CDCA8 /* CORBaseViewController.m */; };
+		9FAE736018EE4C5E004CDCA8 /* CORBlendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734A18EE4C5E004CDCA8 /* CORBlendView.m */; };
+		9FAE736118EE4C5E004CDCA8 /* CORDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734C18EE4C5E004CDCA8 /* CORDefaultCell.m */; };
+		9FAE736218EE4C5E004CDCA8 /* CORNavigationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734E18EE4C5E004CDCA8 /* CORNavigationButton.m */; };
+		9FAE736318EE4C5E004CDCA8 /* CORScrollContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE735018EE4C5E004CDCA8 /* CORScrollContentViewController.m */; };
+		9FAE736418EE4C5E004CDCA8 /* CORWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE735218EE4C5E004CDCA8 /* CORWindowView.m */; };
+		9FAE736B18EE4C98004CDCA8 /* CKSRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE736A18EE4C98004CDCA8 /* CKSRootViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FAE732118EE4C35004CDCA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FAE72F918EE4C35004CDCA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FAE730018EE4C35004CDCA8;
+			remoteInfo = CORKitSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9FAE730118EE4C35004CDCA8 /* CORKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CORKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FAE730418EE4C35004CDCA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9FAE730618EE4C35004CDCA8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9FAE730818EE4C35004CDCA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9FAE730C18EE4C35004CDCA8 /* CORKitSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CORKitSample-Info.plist"; sourceTree = "<group>"; };
+		9FAE730E18EE4C35004CDCA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9FAE731018EE4C35004CDCA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9FAE731218EE4C35004CDCA8 /* CORKitSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CORKitSample-Prefix.pch"; sourceTree = "<group>"; };
+		9FAE731318EE4C35004CDCA8 /* CKSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKSAppDelegate.h; sourceTree = "<group>"; };
+		9FAE731418EE4C35004CDCA8 /* CKSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKSAppDelegate.m; sourceTree = "<group>"; };
+		9FAE731618EE4C35004CDCA8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9FAE731C18EE4C35004CDCA8 /* CORKitSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CORKitSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FAE731D18EE4C35004CDCA8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9FAE732518EE4C35004CDCA8 /* CORKitSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CORKitSampleTests-Info.plist"; sourceTree = "<group>"; };
+		9FAE732718EE4C35004CDCA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9FAE732918EE4C35004CDCA8 /* CORKitSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CORKitSampleTests.m; sourceTree = "<group>"; };
+		9FAE733618EE4C5E004CDCA8 /* NSString+COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+COR.h"; sourceTree = "<group>"; };
+		9FAE733718EE4C5E004CDCA8 /* NSString+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+COR.m"; sourceTree = "<group>"; };
+		9FAE733818EE4C5E004CDCA8 /* UIDevice+COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+COR.h"; sourceTree = "<group>"; };
+		9FAE733918EE4C5E004CDCA8 /* UIDevice+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+COR.m"; sourceTree = "<group>"; };
+		9FAE733A18EE4C5E004CDCA8 /* UIImage+COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+COR.h"; sourceTree = "<group>"; };
+		9FAE733B18EE4C5E004CDCA8 /* UIImage+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+COR.m"; sourceTree = "<group>"; };
+		9FAE733C18EE4C5E004CDCA8 /* UINavigationController+COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+COR.h"; sourceTree = "<group>"; };
+		9FAE733D18EE4C5E004CDCA8 /* UINavigationController+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+COR.m"; sourceTree = "<group>"; };
+		9FAE733E18EE4C5E004CDCA8 /* UIStoryboard+COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+COR.h"; sourceTree = "<group>"; };
+		9FAE733F18EE4C5E004CDCA8 /* UIStoryboard+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+COR.m"; sourceTree = "<group>"; };
+		9FAE734018EE4C5E004CDCA8 /* UIView+COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+COR.h"; sourceTree = "<group>"; };
+		9FAE734118EE4C5E004CDCA8 /* UIView+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+COR.m"; sourceTree = "<group>"; };
+		9FAE734218EE4C5E004CDCA8 /* UIViewController+COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+COR.h"; sourceTree = "<group>"; };
+		9FAE734318EE4C5E004CDCA8 /* UIViewController+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+COR.m"; sourceTree = "<group>"; };
+		9FAE734518EE4C5E004CDCA8 /* CORAudioSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORAudioSlider.h; sourceTree = "<group>"; };
+		9FAE734618EE4C5E004CDCA8 /* CORAudioSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORAudioSlider.m; sourceTree = "<group>"; };
+		9FAE734718EE4C5E004CDCA8 /* CORBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORBaseViewController.h; sourceTree = "<group>"; };
+		9FAE734818EE4C5E004CDCA8 /* CORBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORBaseViewController.m; sourceTree = "<group>"; };
+		9FAE734918EE4C5E004CDCA8 /* CORBlendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORBlendView.h; sourceTree = "<group>"; };
+		9FAE734A18EE4C5E004CDCA8 /* CORBlendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORBlendView.m; sourceTree = "<group>"; };
+		9FAE734B18EE4C5E004CDCA8 /* CORDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORDefaultCell.h; sourceTree = "<group>"; };
+		9FAE734C18EE4C5E004CDCA8 /* CORDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORDefaultCell.m; sourceTree = "<group>"; };
+		9FAE734D18EE4C5E004CDCA8 /* CORNavigationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORNavigationButton.h; sourceTree = "<group>"; };
+		9FAE734E18EE4C5E004CDCA8 /* CORNavigationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORNavigationButton.m; sourceTree = "<group>"; };
+		9FAE734F18EE4C5E004CDCA8 /* CORScrollContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORScrollContentViewController.h; sourceTree = "<group>"; };
+		9FAE735018EE4C5E004CDCA8 /* CORScrollContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORScrollContentViewController.m; sourceTree = "<group>"; };
+		9FAE735118EE4C5E004CDCA8 /* CORWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORWindowView.h; sourceTree = "<group>"; };
+		9FAE735218EE4C5E004CDCA8 /* CORWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORWindowView.m; sourceTree = "<group>"; };
+		9FAE735418EE4C5E004CDCA8 /* COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COR.h; sourceTree = "<group>"; };
+		9FAE735618EE4C5E004CDCA8 /* CORMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORMacros.h; sourceTree = "<group>"; };
+		9FAE736918EE4C98004CDCA8 /* CKSRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSRootViewController.h; sourceTree = "<group>"; };
+		9FAE736A18EE4C98004CDCA8 /* CKSRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSRootViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FAE72FE18EE4C35004CDCA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FAE730718EE4C35004CDCA8 /* CoreGraphics.framework in Frameworks */,
+				9FAE730918EE4C35004CDCA8 /* UIKit.framework in Frameworks */,
+				9FAE730518EE4C35004CDCA8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FAE731918EE4C35004CDCA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FAE731E18EE4C35004CDCA8 /* XCTest.framework in Frameworks */,
+				9FAE732018EE4C35004CDCA8 /* UIKit.framework in Frameworks */,
+				9FAE731F18EE4C35004CDCA8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FAE72F818EE4C35004CDCA8 = {
+			isa = PBXGroup;
+			children = (
+				9FAE733318EE4C57004CDCA8 /* Lib */,
+				9FAE730A18EE4C35004CDCA8 /* CORKitSample */,
+				9FAE732318EE4C35004CDCA8 /* CORKitSampleTests */,
+				9FAE730318EE4C35004CDCA8 /* Frameworks */,
+				9FAE730218EE4C35004CDCA8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FAE730218EE4C35004CDCA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE730118EE4C35004CDCA8 /* CORKitSample.app */,
+				9FAE731C18EE4C35004CDCA8 /* CORKitSampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FAE730318EE4C35004CDCA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE730418EE4C35004CDCA8 /* Foundation.framework */,
+				9FAE730618EE4C35004CDCA8 /* CoreGraphics.framework */,
+				9FAE730818EE4C35004CDCA8 /* UIKit.framework */,
+				9FAE731D18EE4C35004CDCA8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FAE730A18EE4C35004CDCA8 /* CORKitSample */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE731318EE4C35004CDCA8 /* CKSAppDelegate.h */,
+				9FAE731418EE4C35004CDCA8 /* CKSAppDelegate.m */,
+				9FAE736918EE4C98004CDCA8 /* CKSRootViewController.h */,
+				9FAE736A18EE4C98004CDCA8 /* CKSRootViewController.m */,
+				9FAE731618EE4C35004CDCA8 /* Images.xcassets */,
+				9FAE730B18EE4C35004CDCA8 /* Supporting Files */,
+			);
+			path = CORKitSample;
+			sourceTree = "<group>";
+		};
+		9FAE730B18EE4C35004CDCA8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE730C18EE4C35004CDCA8 /* CORKitSample-Info.plist */,
+				9FAE730D18EE4C35004CDCA8 /* InfoPlist.strings */,
+				9FAE731018EE4C35004CDCA8 /* main.m */,
+				9FAE731218EE4C35004CDCA8 /* CORKitSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FAE732318EE4C35004CDCA8 /* CORKitSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE732918EE4C35004CDCA8 /* CORKitSampleTests.m */,
+				9FAE732418EE4C35004CDCA8 /* Supporting Files */,
+			);
+			path = CORKitSampleTests;
+			sourceTree = "<group>";
+		};
+		9FAE732418EE4C35004CDCA8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE732518EE4C35004CDCA8 /* CORKitSampleTests-Info.plist */,
+				9FAE732618EE4C35004CDCA8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FAE733318EE4C57004CDCA8 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE733418EE4C5E004CDCA8 /* CORKit */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		9FAE733418EE4C5E004CDCA8 /* CORKit */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE733518EE4C5E004CDCA8 /* Category */,
+				9FAE734418EE4C5E004CDCA8 /* Extension */,
+				9FAE735318EE4C5E004CDCA8 /* Headers */,
+				9FAE735518EE4C5E004CDCA8 /* Util */,
+			);
+			name = CORKit;
+			path = ../../CORKit;
+			sourceTree = "<group>";
+		};
+		9FAE733518EE4C5E004CDCA8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE733618EE4C5E004CDCA8 /* NSString+COR.h */,
+				9FAE733718EE4C5E004CDCA8 /* NSString+COR.m */,
+				9FAE733818EE4C5E004CDCA8 /* UIDevice+COR.h */,
+				9FAE733918EE4C5E004CDCA8 /* UIDevice+COR.m */,
+				9FAE733A18EE4C5E004CDCA8 /* UIImage+COR.h */,
+				9FAE733B18EE4C5E004CDCA8 /* UIImage+COR.m */,
+				9FAE733C18EE4C5E004CDCA8 /* UINavigationController+COR.h */,
+				9FAE733D18EE4C5E004CDCA8 /* UINavigationController+COR.m */,
+				9FAE733E18EE4C5E004CDCA8 /* UIStoryboard+COR.h */,
+				9FAE733F18EE4C5E004CDCA8 /* UIStoryboard+COR.m */,
+				9FAE734018EE4C5E004CDCA8 /* UIView+COR.h */,
+				9FAE734118EE4C5E004CDCA8 /* UIView+COR.m */,
+				9FAE734218EE4C5E004CDCA8 /* UIViewController+COR.h */,
+				9FAE734318EE4C5E004CDCA8 /* UIViewController+COR.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		9FAE734418EE4C5E004CDCA8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE734518EE4C5E004CDCA8 /* CORAudioSlider.h */,
+				9FAE734618EE4C5E004CDCA8 /* CORAudioSlider.m */,
+				9FAE734718EE4C5E004CDCA8 /* CORBaseViewController.h */,
+				9FAE734818EE4C5E004CDCA8 /* CORBaseViewController.m */,
+				9FAE734918EE4C5E004CDCA8 /* CORBlendView.h */,
+				9FAE734A18EE4C5E004CDCA8 /* CORBlendView.m */,
+				9FAE734B18EE4C5E004CDCA8 /* CORDefaultCell.h */,
+				9FAE734C18EE4C5E004CDCA8 /* CORDefaultCell.m */,
+				9FAE734D18EE4C5E004CDCA8 /* CORNavigationButton.h */,
+				9FAE734E18EE4C5E004CDCA8 /* CORNavigationButton.m */,
+				9FAE734F18EE4C5E004CDCA8 /* CORScrollContentViewController.h */,
+				9FAE735018EE4C5E004CDCA8 /* CORScrollContentViewController.m */,
+				9FAE735118EE4C5E004CDCA8 /* CORWindowView.h */,
+				9FAE735218EE4C5E004CDCA8 /* CORWindowView.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9FAE735318EE4C5E004CDCA8 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE735418EE4C5E004CDCA8 /* COR.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		9FAE735518EE4C5E004CDCA8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE735618EE4C5E004CDCA8 /* CORMacros.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FAE730018EE4C35004CDCA8 /* CORKitSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FAE732D18EE4C35004CDCA8 /* Build configuration list for PBXNativeTarget "CORKitSample" */;
+			buildPhases = (
+				9FAE72FD18EE4C35004CDCA8 /* Sources */,
+				9FAE72FE18EE4C35004CDCA8 /* Frameworks */,
+				9FAE72FF18EE4C35004CDCA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CORKitSample;
+			productName = CORKitSample;
+			productReference = 9FAE730118EE4C35004CDCA8 /* CORKitSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9FAE731B18EE4C35004CDCA8 /* CORKitSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FAE733018EE4C35004CDCA8 /* Build configuration list for PBXNativeTarget "CORKitSampleTests" */;
+			buildPhases = (
+				9FAE731818EE4C35004CDCA8 /* Sources */,
+				9FAE731918EE4C35004CDCA8 /* Frameworks */,
+				9FAE731A18EE4C35004CDCA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FAE732218EE4C35004CDCA8 /* PBXTargetDependency */,
+			);
+			name = CORKitSampleTests;
+			productName = CORKitSampleTests;
+			productReference = 9FAE731C18EE4C35004CDCA8 /* CORKitSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FAE72F918EE4C35004CDCA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CKS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = corleonis.jp;
+				TargetAttributes = {
+					9FAE731B18EE4C35004CDCA8 = {
+						TestTargetID = 9FAE730018EE4C35004CDCA8;
+					};
+				};
+			};
+			buildConfigurationList = 9FAE72FC18EE4C35004CDCA8 /* Build configuration list for PBXProject "CORKitSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9FAE72F818EE4C35004CDCA8;
+			productRefGroup = 9FAE730218EE4C35004CDCA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FAE730018EE4C35004CDCA8 /* CORKitSample */,
+				9FAE731B18EE4C35004CDCA8 /* CORKitSampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FAE72FF18EE4C35004CDCA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FAE730F18EE4C35004CDCA8 /* InfoPlist.strings in Resources */,
+				9FAE731718EE4C35004CDCA8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FAE731A18EE4C35004CDCA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FAE732818EE4C35004CDCA8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FAE72FD18EE4C35004CDCA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FAE735E18EE4C5E004CDCA8 /* CORAudioSlider.m in Sources */,
+				9FAE736418EE4C5E004CDCA8 /* CORWindowView.m in Sources */,
+				9FAE736018EE4C5E004CDCA8 /* CORBlendView.m in Sources */,
+				9FAE735B18EE4C5E004CDCA8 /* UIStoryboard+COR.m in Sources */,
+				9FAE735A18EE4C5E004CDCA8 /* UINavigationController+COR.m in Sources */,
+				9FAE736318EE4C5E004CDCA8 /* CORScrollContentViewController.m in Sources */,
+				9FAE731518EE4C35004CDCA8 /* CKSAppDelegate.m in Sources */,
+				9FAE735D18EE4C5E004CDCA8 /* UIViewController+COR.m in Sources */,
+				9FAE735F18EE4C5E004CDCA8 /* CORBaseViewController.m in Sources */,
+				9FAE736B18EE4C98004CDCA8 /* CKSRootViewController.m in Sources */,
+				9FAE735718EE4C5E004CDCA8 /* NSString+COR.m in Sources */,
+				9FAE736218EE4C5E004CDCA8 /* CORNavigationButton.m in Sources */,
+				9FAE736118EE4C5E004CDCA8 /* CORDefaultCell.m in Sources */,
+				9FAE735818EE4C5E004CDCA8 /* UIDevice+COR.m in Sources */,
+				9FAE731118EE4C35004CDCA8 /* main.m in Sources */,
+				9FAE735918EE4C5E004CDCA8 /* UIImage+COR.m in Sources */,
+				9FAE735C18EE4C5E004CDCA8 /* UIView+COR.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FAE731818EE4C35004CDCA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FAE732A18EE4C35004CDCA8 /* CORKitSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FAE732218EE4C35004CDCA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FAE730018EE4C35004CDCA8 /* CORKitSample */;
+			targetProxy = 9FAE732118EE4C35004CDCA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FAE730D18EE4C35004CDCA8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FAE730E18EE4C35004CDCA8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9FAE732618EE4C35004CDCA8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FAE732718EE4C35004CDCA8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FAE732B18EE4C35004CDCA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9FAE732C18EE4C35004CDCA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FAE732E18EE4C35004CDCA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CORKitSample/CORKitSample-Prefix.pch";
+				INFOPLIST_FILE = "CORKitSample/CORKitSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9FAE732F18EE4C35004CDCA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CORKitSample/CORKitSample-Prefix.pch";
+				INFOPLIST_FILE = "CORKitSample/CORKitSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9FAE733118EE4C35004CDCA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CORKitSample.app/CORKitSample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CORKitSample/CORKitSample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CORKitSampleTests/CORKitSampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9FAE733218EE4C35004CDCA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CORKitSample.app/CORKitSample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CORKitSample/CORKitSample-Prefix.pch";
+				INFOPLIST_FILE = "CORKitSampleTests/CORKitSampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FAE72FC18EE4C35004CDCA8 /* Build configuration list for PBXProject "CORKitSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FAE732B18EE4C35004CDCA8 /* Debug */,
+				9FAE732C18EE4C35004CDCA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FAE732D18EE4C35004CDCA8 /* Build configuration list for PBXNativeTarget "CORKitSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FAE732E18EE4C35004CDCA8 /* Debug */,
+				9FAE732F18EE4C35004CDCA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9FAE733018EE4C35004CDCA8 /* Build configuration list for PBXNativeTarget "CORKitSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FAE733118EE4C35004CDCA8 /* Debug */,
+				9FAE733218EE4C35004CDCA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FAE72F918EE4C35004CDCA8 /* Project object */;
+}
