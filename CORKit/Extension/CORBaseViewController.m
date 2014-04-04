@@ -17,7 +17,7 @@
 {
     UIViewController *_presentedViewController;
     CORBaseViewControllerPresentCompletion _presentCompletion;
-    CORBaseViewControllerPresentCompletion _dismiCORCompletion;
+    CORBaseViewControllerPresentCompletion _dismissCompletion;
 
 }
 
@@ -66,7 +66,7 @@
     [viewController.view.layer addAnimation:animation forKey:@"presentAnimation"];
 }
 
-- (void)dismiCORTransparentViewControllerAnimated:(BOOL)animated completion:(CORBaseViewControllerPresentCompletion)completion
+- (void)dismissTransparentViewControllerAnimated:(BOOL)animated completion:(CORBaseViewControllerPresentCompletion)completion
 {
     if (!animated) {
         
@@ -74,7 +74,7 @@
         return;
     }
     
-    _dismiCORCompletion = completion;
+    _dismissCompletion = completion;
     
     CGFloat hiddenOffset = self.view.bounds.size.height;
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
@@ -85,7 +85,7 @@
     animation.fillMode = kCAFillModeBoth;
     animation.duration = 0.28f;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-    [self.view.layer addAnimation:animation forKey:@"dismiCORAnimation"];
+    [self.view.layer addAnimation:animation forKey:@"dismissAnimation"];
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
@@ -101,9 +101,9 @@
             _presentCompletion = nil;
         }
         
-    } else if (anim  == [self.view.layer animationForKey:@"dismiCORAnimation"]) {
+    } else if (anim  == [self.view.layer animationForKey:@"dismissAnimation"]) {
         
-        [self.view.layer removeAnimationForKey:@"dismiCORAnimation"];
+        [self.view.layer removeAnimationForKey:@"dismissAnimation"];
         
         
         if (self.navigationController) {
@@ -115,10 +115,10 @@
             [self containerRemoveFromParentViewController];
         }
         
-        if (_dismiCORCompletion) {
+        if (_dismissCompletion) {
             
-            _dismiCORCompletion();
-            _dismiCORCompletion = nil;
+            _dismissCompletion();
+            _dismissCompletion = nil;
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F97322B18EEBAB400B13F59 /* NSDate+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F97322A18EEBAB400B13F59 /* NSDate+COR.m */; };
 		9FAE730518EE4C35004CDCA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730418EE4C35004CDCA8 /* Foundation.framework */; };
 		9FAE730718EE4C35004CDCA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730618EE4C35004CDCA8 /* CoreGraphics.framework */; };
 		9FAE730918EE4C35004CDCA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730818EE4C35004CDCA8 /* UIKit.framework */; };
@@ -47,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F9731DC18EE83C500B13F59 /* CORKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CORKit.h; sourceTree = "<group>"; };
+		9F97322918EEBAB400B13F59 /* NSDate+COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+COR.h"; sourceTree = "<group>"; };
+		9F97322A18EEBAB400B13F59 /* NSDate+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+COR.m"; sourceTree = "<group>"; };
 		9FAE730118EE4C35004CDCA8 /* CORKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CORKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FAE730418EE4C35004CDCA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9FAE730618EE4C35004CDCA8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,7 +95,6 @@
 		9FAE735018EE4C5E004CDCA8 /* CORScrollContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORScrollContentViewController.m; sourceTree = "<group>"; };
 		9FAE735118EE4C5E004CDCA8 /* CORWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORWindowView.h; sourceTree = "<group>"; };
 		9FAE735218EE4C5E004CDCA8 /* CORWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORWindowView.m; sourceTree = "<group>"; };
-		9FAE735418EE4C5E004CDCA8 /* COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COR.h; sourceTree = "<group>"; };
 		9FAE735618EE4C5E004CDCA8 /* CORMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORMacros.h; sourceTree = "<group>"; };
 		9FAE736918EE4C98004CDCA8 /* CKSRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSRootViewController.h; sourceTree = "<group>"; };
 		9FAE736A18EE4C98004CDCA8 /* CKSRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSRootViewController.m; sourceTree = "<group>"; };
@@ -205,9 +208,9 @@
 		9FAE733418EE4C5E004CDCA8 /* CORKit */ = {
 			isa = PBXGroup;
 			children = (
+				9F9731DC18EE83C500B13F59 /* CORKit.h */,
 				9FAE733518EE4C5E004CDCA8 /* Category */,
 				9FAE734418EE4C5E004CDCA8 /* Extension */,
-				9FAE735318EE4C5E004CDCA8 /* Headers */,
 				9FAE735518EE4C5E004CDCA8 /* Util */,
 			);
 			name = CORKit;
@@ -231,6 +234,8 @@
 				9FAE734118EE4C5E004CDCA8 /* UIView+COR.m */,
 				9FAE734218EE4C5E004CDCA8 /* UIViewController+COR.h */,
 				9FAE734318EE4C5E004CDCA8 /* UIViewController+COR.m */,
+				9F97322918EEBAB400B13F59 /* NSDate+COR.h */,
+				9F97322A18EEBAB400B13F59 /* NSDate+COR.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -254,14 +259,6 @@
 				9FAE735218EE4C5E004CDCA8 /* CORWindowView.m */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		9FAE735318EE4C5E004CDCA8 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				9FAE735418EE4C5E004CDCA8 /* COR.h */,
-			);
-			path = Headers;
 			sourceTree = "<group>";
 		};
 		9FAE735518EE4C5E004CDCA8 /* Util */ = {
@@ -375,6 +372,7 @@
 				9FAE735A18EE4C5E004CDCA8 /* UINavigationController+COR.m in Sources */,
 				9FAE736318EE4C5E004CDCA8 /* CORScrollContentViewController.m in Sources */,
 				9FAE731518EE4C35004CDCA8 /* CKSAppDelegate.m in Sources */,
+				9F97322B18EEBAB400B13F59 /* NSDate+COR.m in Sources */,
 				9FAE735D18EE4C5E004CDCA8 /* UIViewController+COR.m in Sources */,
 				9FAE735F18EE4C5E004CDCA8 /* CORBaseViewController.m in Sources */,
 				9FAE736B18EE4C98004CDCA8 /* CKSRootViewController.m in Sources */,
@@ -581,6 +579,7 @@
 				9FAE732F18EE4C35004CDCA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9FAE733018EE4C35004CDCA8 /* Build configuration list for PBXNativeTarget "CORKitSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +588,7 @@
 				9FAE733218EE4C35004CDCA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

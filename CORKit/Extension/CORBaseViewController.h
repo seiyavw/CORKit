@@ -13,6 +13,6 @@ typedef void (^CORBaseViewControllerPresentCompletion)();
 @interface CORBaseViewController : UIViewController
 
 - (void)presentTransparentViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(CORBaseViewControllerPresentCompletion)completion;
-- (void)dismiCORTransparentViewControllerAnimated:(BOOL)animated completion:(CORBaseViewControllerPresentCompletion)completion;
+- (void)dismissTransparentViewControllerAnimated:(BOOL)animated completion:(CORBaseViewControllerPresentCompletion)completion;
 
 @end
