@@ -1,6 +1,6 @@
 //
 //  NSString+COR.m
-//  MyTemplate
+//  CORKit
 //
 //  Created by Seiya Sasaki on 2014/02/20.
 //  Copyright (c) 2014年 Seiya Sasaki. All rights reserved.

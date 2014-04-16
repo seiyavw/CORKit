@@ -1,9 +1,9 @@
 //
 //  CORBlendView.m
-//  MyTemplate
+//  CORKit
 //
 //  Created by Seiya Sasaki on 2014/02/26.
-//  Copyright (c) 2014年 kayac. All rights reserved.
+//  Copyright (c) 2014年 Seiya Sasaki All rights reserved.
 //
 
 #import "CORBlendView.h"
