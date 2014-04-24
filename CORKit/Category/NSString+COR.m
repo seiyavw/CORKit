@@ -21,8 +21,12 @@
                                   context:nil].size;
     } else {
         
-        //iOS6以下
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        // under ios7
         size = [self sizeWithFont:font constrainedToSize:CGSizeMake(label.frame.size.width, CGFLOAT_MAX)];
+        #pragma clang diagnostic pop
+        
     }
     
     CGRect frame = CGRectMake(label.frame.origin.x, label.frame.origin.y, label.frame.size.width, size.height + padding);
@@ -42,8 +46,11 @@
                                   context:nil].size;
     } else {
         
-        //iOS6以下
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        // under ios7
         size = [self sizeWithFont:font constrainedToSize:CGSizeMake(viewWidth, CGFLOAT_MAX)];
+        #pragma clang diagnostic pop
     }
     
     size.height += padding;
