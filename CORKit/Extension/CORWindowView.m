@@ -35,6 +35,15 @@
     // override
 }
 
+- (void)prepareToShow
+{
+    // override and access appdelegate's window and add view here like:
+    //
+    // [aDelegate.window addSubview: self];
+    // [super showSharedView];
+    //
+}
+
 + (void)show
 {
     [[self sharedView] showSharedView];
@@ -47,14 +56,8 @@
 
 - (void)showSharedView
 {
-    // override and access appdelegate's window and add view here like:
-    //
-    // - (void)showSharedView {
-    //
-    //     [aDelegate.window addSubview: self];
-    //     [super showSharedView];
-    //
-    // }
+    
+    [self prepareToShow];
     
     self.alpha = 0.0;
     

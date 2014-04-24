@@ -13,6 +13,7 @@
 - (void)setup;
 + (void)show;
 + (void)hide;
+- (void)prepareToShow;
 - (void)showSharedView;
 - (void)hideSharedView;
 
