@@ -10,4 +10,10 @@
 
 @interface CORWindowView : UIView
 
+- (void)setup;
++ (void)show;
++ (void)hide;
+- (void)showSharedView;
+- (void)hideSharedView;
+
 @end

@@ -33,7 +33,6 @@
 - (void)setup
 {
     // override
-    // setup subviews or something in SubClaCOR
 }
 
 + (void)show
@@ -48,10 +47,14 @@
 
 - (void)showSharedView
 {
-    // acceCOR app delegate and add view
-    
-//    AppDelegate *aDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
-//    [aDelegate.window addSubview:self];
+    // override and access appdelegate's window and add view here like:
+    //
+    // - (void)showSharedView {
+    //
+    //     [aDelegate.window addSubview: self];
+    //     [super showSharedView];
+    //
+    // }
     
     self.alpha = 0.0;
     
