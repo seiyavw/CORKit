@@ -130,14 +130,13 @@
     _scrollView = scrollView;
     
     [self.view addSubview:scrollView];
-
 }
 
 #pragma mark - CORPagingScrollViewDelegate
 
 - (void)scrollView:(CORPagingScrollView *)scrollView didMoveToPageAt:(NSInteger)pageIndex
 {
-//    LOG(@"page index %d", pageIndex);
+    LOG(@"page index %d", pageIndex);
 }
 
 #pragma mark - CORScrollMenuBarDelegate

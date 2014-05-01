@@ -91,40 +91,50 @@
 
 - (void)updatePageIndex
 {
-    if (_loopEnabled) {
-        
-        switch (_direction) {
-            case CORPagingScrollLeft: {
-                _currentIndex++;
-                if (_currentIndex > _pages.count - 1) {
-                    _currentIndex = 0;
-                }
+    switch (_direction) {
+        case CORPagingScrollLeft: {
+            _currentIndex++;
+            if (_currentIndex > _pages.count - 1) {
+                _currentIndex = 0;
             }
-                break;
-            case CORPagingScrollRight: {
-                _currentIndex--;
-                if (_currentIndex < 0) {
-                    _currentIndex = _pages.count - 1;
-                }
-                break;
-            }
-            case CORPagingScrollNone:
-            default:
-                break;
         }
+            break;
+        case CORPagingScrollRight: {
+            _currentIndex--;
+            if (_currentIndex < 0) {
+                _currentIndex = _pages.count - 1;
+            }
+            break;
+        }
+        case CORPagingScrollNone:
+        default:
+            break;
     }
-
 }
 
 - (void)handlePaging
 {
     if (_loopEnabled) {
         
+        // rearrange
         [self rearrangePages];
+        
+        // reset values at the end
+        _direction = CORPagingScrollNone;
+        _pageMovable = NO;
         
         if (self.delegate &&
             [self.delegate respondsToSelector:@selector(scrollView: didMoveToPageAt:)]) {
             [self.delegate scrollView:self didMoveToPageAt:_currentIndex];
+        }
+        
+    } else {
+    
+        if (self.delegate &&
+            [self.delegate respondsToSelector:@selector(scrollView: didMoveToPageAt:)]) {
+            
+            NSInteger index = (NSInteger)_scrollView.contentOffset.x / _scrollView.frame.size.width;
+            [self.delegate scrollView:self didMoveToPageAt:index];
         }
     }
 }
@@ -180,6 +190,7 @@
         return; // beyond the number of pages
     
     _currentIndex = pageIndex; // set index
+    _pageMovable = YES;// enable moving
     
     // update pages
     [self handlePaging];
@@ -196,9 +207,10 @@
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
 {
+    // if scrollView will change its page
     if (_beginDraggingOffset.x != targetContentOffset->x) {
-        // if scrollView will change its page
         
+        // detect direction
         if (_beginDraggingOffset.x < targetContentOffset->x) {
             
             _direction = CORPagingScrollLeft;
@@ -208,7 +220,10 @@
             _direction = CORPagingScrollRight;
         }
         
+        // set page moging enable for page handling
         _pageMovable = YES;
+        
+        // prepare index for page handling
         [self updatePageIndex];
     }
 }
@@ -216,12 +231,7 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     if (_pageMovable) {
-        // do paging
         [self handlePaging];
-        
-        // reset values at the end
-        _direction = CORPagingScrollNone;
-        _pageMovable = NO;
     }
 }
 
