@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CORPagingScrollView.h"
 
-@interface CKSRootViewController : UIViewController
+@interface CKSRootViewController : UIViewController <CORPagingScrollViewDelegate>
 
 @end

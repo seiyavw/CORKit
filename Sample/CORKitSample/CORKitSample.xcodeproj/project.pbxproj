@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F97322B18EEBAB400B13F59 /* NSDate+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F97322A18EEBAB400B13F59 /* NSDate+COR.m */; };
+		9F9B1D761911D2F80047341B /* CORPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B1D751911D2F80047341B /* CORPagingScrollView.m */; };
 		9FAE730518EE4C35004CDCA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730418EE4C35004CDCA8 /* Foundation.framework */; };
 		9FAE730718EE4C35004CDCA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730618EE4C35004CDCA8 /* CoreGraphics.framework */; };
 		9FAE730918EE4C35004CDCA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730818EE4C35004CDCA8 /* UIKit.framework */; };
@@ -51,6 +52,8 @@
 		9F9731DC18EE83C500B13F59 /* CORKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CORKit.h; sourceTree = "<group>"; };
 		9F97322918EEBAB400B13F59 /* NSDate+COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+COR.h"; sourceTree = "<group>"; };
 		9F97322A18EEBAB400B13F59 /* NSDate+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+COR.m"; sourceTree = "<group>"; };
+		9F9B1D741911D2F80047341B /* CORPagingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORPagingScrollView.h; sourceTree = "<group>"; };
+		9F9B1D751911D2F80047341B /* CORPagingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORPagingScrollView.m; sourceTree = "<group>"; };
 		9FAE730118EE4C35004CDCA8 /* CORKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CORKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FAE730418EE4C35004CDCA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9FAE730618EE4C35004CDCA8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -257,6 +260,8 @@
 				9FAE735018EE4C5E004CDCA8 /* CORScrollContentViewController.m */,
 				9FAE735118EE4C5E004CDCA8 /* CORWindowView.h */,
 				9FAE735218EE4C5E004CDCA8 /* CORWindowView.m */,
+				9F9B1D741911D2F80047341B /* CORPagingScrollView.h */,
+				9F9B1D751911D2F80047341B /* CORPagingScrollView.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				9FAE735818EE4C5E004CDCA8 /* UIDevice+COR.m in Sources */,
 				9FAE731118EE4C35004CDCA8 /* main.m in Sources */,
 				9FAE735918EE4C5E004CDCA8 /* UIImage+COR.m in Sources */,
+				9F9B1D761911D2F80047341B /* CORPagingScrollView.m in Sources */,
 				9FAE735C18EE4C5E004CDCA8 /* UIView+COR.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
