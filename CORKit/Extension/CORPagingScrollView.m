@@ -89,6 +89,9 @@
     
 }
 
+/**
+ * prepare page index for moving page views
+ */
 - (void)updatePageIndex
 {
     switch (_direction) {
@@ -112,6 +115,9 @@
     }
 }
 
+/**
+ * move page views based on updated page index
+ */
 - (void)handlePaging
 {
     if (_loopEnabled) {
@@ -130,6 +136,7 @@
         
     } else {
     
+        // devide delegate for keeping consistency of page index
         if (self.delegate &&
             [self.delegate respondsToSelector:@selector(scrollView: didMoveToPageAt:)]) {
             
@@ -196,8 +203,6 @@
     [self handlePaging];
 }
 
-
-
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
@@ -234,6 +239,5 @@
         [self handlePaging];
     }
 }
-
 
 @end

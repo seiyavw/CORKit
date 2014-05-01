@@ -148,7 +148,6 @@
 
 - (void)scrollMenuBar:(CORPagingScrollView *)scrolLMenuBar didTapButtonOfTag:(NSInteger)tag
 {
-
     LOG(@"tag : %d", tag);
 }
 
