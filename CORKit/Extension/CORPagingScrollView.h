@@ -14,7 +14,6 @@ typedef NS_ENUM(NSUInteger, CORPagingScrollDirection) {
     CORPagingScrollRight = 2
 };
 
-
 @protocol CORPagingScrollViewDelegate;
 
 @interface CORPagingScrollView : UIView <UIScrollViewDelegate>

@@ -20,7 +20,7 @@
 - (void)setOriginY:(CGFloat)originY;
 - (void)setWidth:(CGFloat)width;
 - (void)setHeight:(CGFloat)height;
-- (void)showFrameLog;
+- (void)checkFrame;
 
 
 @end

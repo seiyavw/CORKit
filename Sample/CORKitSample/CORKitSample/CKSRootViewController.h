@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "CORPagingScrollView.h"
+#import "CORScrollMenuBar.h"
 
-@interface CKSRootViewController : UIViewController <CORPagingScrollViewDelegate>
+@interface CKSRootViewController : UIViewController <CORPagingScrollViewDelegate, CORScrollMenuBarDelegate>
 
 @end

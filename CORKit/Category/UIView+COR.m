@@ -55,7 +55,7 @@
     [self setFrame:CGRectMake(self.getOriginX, self.getOriginY, self.getWidth, height)];
 }
 
-- (void)showFrameLog
+- (void)checkFrame
 {
     NSLog(@"--- Instance of %@ ---", NSStringFromClass([self class]));
     NSLog(@" OriginX : %f", [self getOriginX]);

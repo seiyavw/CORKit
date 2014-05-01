@@ -6,6 +6,10 @@
 //  Copyright (c) 2014年 corleonis.jp. All rights reserved.
 //
 
+// TODO 14/05/01
+// - flexible pages size (with margin options)
+// - refactoring
+
 #import "CORPagingScrollView.h"
 
 @implementation CORPagingScrollView
@@ -14,6 +18,7 @@
     NSArray *_pages;
     NSInteger _currentIndex;
     CORPagingScrollDirection _direction;
+    CGPoint _beginDraggingOffset;
     BOOL _pageMovable;
 }
 
@@ -87,10 +92,9 @@
     _pageMovable = NO;
 }
 
-
-- (void)handlePaging
+- (void)updatePageIndex
 {
-    if (_loopEnabled && _pageMovable) {
+    if (_loopEnabled) {
         
         switch (_direction) {
             case CORPagingScrollLeft: {
@@ -111,6 +115,13 @@
             default:
                 break;
         }
+    }
+
+}
+
+- (void)handlePaging
+{
+    if (_loopEnabled && _pageMovable) {
         
         [self rearrangePages];
         
@@ -197,14 +208,19 @@
     }
     previousOffsetX = scrollView.contentOffset.x;
     
-    // for calculate page index
-    static NSInteger previousPage = 0;
-    NSInteger currentPage = round(_scrollView.contentOffset.x / _scrollView.frame.size.width);
+}
 
-    if (previousPage != currentPage) {
-        
-        previousPage = currentPage;
-        _pageMovable = YES; // enables pages to move for scrollViewDidEndDecelerating method
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    _beginDraggingOffset = _scrollView.contentOffset;
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    if (_beginDraggingOffset.x != targetContentOffset->x) {
+        // if scrollView will change its page
+        _pageMovable = YES;
+        [self updatePageIndex];
     }
 }
 
@@ -212,5 +228,6 @@
 {
     [self handlePaging];
 }
+
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F48FA73191231F000EA1498 /* CORScrollMenuBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F48FA72191231F000EA1498 /* CORScrollMenuBar.m */; };
 		9F97322B18EEBAB400B13F59 /* NSDate+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F97322A18EEBAB400B13F59 /* NSDate+COR.m */; };
 		9F9B1D761911D2F80047341B /* CORPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B1D751911D2F80047341B /* CORPagingScrollView.m */; };
 		9FAE730518EE4C35004CDCA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730418EE4C35004CDCA8 /* Foundation.framework */; };
@@ -49,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F48FA71191231F000EA1498 /* CORScrollMenuBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORScrollMenuBar.h; sourceTree = "<group>"; };
+		9F48FA72191231F000EA1498 /* CORScrollMenuBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORScrollMenuBar.m; sourceTree = "<group>"; };
 		9F9731DC18EE83C500B13F59 /* CORKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CORKit.h; sourceTree = "<group>"; };
 		9F97322918EEBAB400B13F59 /* NSDate+COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+COR.h"; sourceTree = "<group>"; };
 		9F97322A18EEBAB400B13F59 /* NSDate+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+COR.m"; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 				9FAE735218EE4C5E004CDCA8 /* CORWindowView.m */,
 				9F9B1D741911D2F80047341B /* CORPagingScrollView.h */,
 				9F9B1D751911D2F80047341B /* CORPagingScrollView.m */,
+				9F48FA71191231F000EA1498 /* CORScrollMenuBar.h */,
+				9F48FA72191231F000EA1498 /* CORScrollMenuBar.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 				9FAE731118EE4C35004CDCA8 /* main.m in Sources */,
 				9FAE735918EE4C5E004CDCA8 /* UIImage+COR.m in Sources */,
 				9F9B1D761911D2F80047341B /* CORPagingScrollView.m in Sources */,
+				9F48FA73191231F000EA1498 /* CORScrollMenuBar.m in Sources */,
 				9FAE735C18EE4C5E004CDCA8 /* UIView+COR.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +515,7 @@
 				GCC_PREFIX_HEADER = "CORKitSample/CORKitSample-Prefix.pch";
 				INFOPLIST_FILE = "CORKitSample/CORKitSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F3D015A3-C5B3-43D4-B937-9A3019842FF4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -522,6 +529,7 @@
 				GCC_PREFIX_HEADER = "CORKitSample/CORKitSample-Prefix.pch";
 				INFOPLIST_FILE = "CORKitSample/CORKitSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F3D015A3-C5B3-43D4-B937-9A3019842FF4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
