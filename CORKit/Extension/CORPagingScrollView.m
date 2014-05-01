@@ -87,9 +87,6 @@
     
     [_scrollView setContentOffset:CGPointMake(visibleIndex * pageWidth, 0.f) animated:NO];
     
-    // reset values at the end
-    _direction = CORPagingScrollNone;
-    _pageMovable = NO;
 }
 
 - (void)updatePageIndex
@@ -121,7 +118,7 @@
 
 - (void)handlePaging
 {
-    if (_loopEnabled && _pageMovable) {
+    if (_loopEnabled) {
         
         [self rearrangePages];
         
@@ -182,7 +179,6 @@
     if (pageIndex > _pages.count - 1)
         return; // beyond the number of pages
     
-    _pageMovable = YES; // enable pages to move
     _currentIndex = pageIndex; // set index
     
     // update pages
@@ -193,23 +189,6 @@
 
 #pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    // for detecting direction
-    static CGFloat previousOffsetX = 0;
-    _direction = CORPagingScrollNone;
-    if (previousOffsetX > scrollView.contentOffset.x) {
-        
-        _direction = CORPagingScrollRight;
-        
-    } else if (previousOffsetX < scrollView.contentOffset.x) {
-        
-        _direction = CORPagingScrollLeft;
-    }
-    previousOffsetX = scrollView.contentOffset.x;
-    
-}
-
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     _beginDraggingOffset = _scrollView.contentOffset;
@@ -219,6 +198,16 @@
 {
     if (_beginDraggingOffset.x != targetContentOffset->x) {
         // if scrollView will change its page
+        
+        if (_beginDraggingOffset.x < targetContentOffset->x) {
+            
+            _direction = CORPagingScrollLeft;
+            
+        } else if (_beginDraggingOffset.x > targetContentOffset->x) {
+            
+            _direction = CORPagingScrollRight;
+        }
+        
         _pageMovable = YES;
         [self updatePageIndex];
     }
@@ -226,7 +215,14 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    [self handlePaging];
+    if (_pageMovable) {
+        // do paging
+        [self handlePaging];
+        
+        // reset values at the end
+        _direction = CORPagingScrollNone;
+        _pageMovable = NO;
+    }
 }
 
 
