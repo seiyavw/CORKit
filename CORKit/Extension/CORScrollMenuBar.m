@@ -11,7 +11,7 @@
 @implementation CORScrollMenuBar
 {
     UIScrollView *_scrollView;
-    __weak NSArray *_buttons;
+    NSArray *_buttons;
 }
 
 - (id)initWithFrame:(CGRect)frame
