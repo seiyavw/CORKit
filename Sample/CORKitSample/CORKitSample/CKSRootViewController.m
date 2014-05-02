@@ -15,6 +15,7 @@
 @implementation CKSRootViewController
 {
     CORPagingScrollView *_scrollView;
+    NSArray * _buttons;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -47,31 +48,33 @@
 {
     CORScrollMenuBar *menuBar = [[CORScrollMenuBar alloc] initWithFrame:CGRectMake(0.f, 0.f, 320.f, 64.f)];
     menuBar.backgroundColor = [UIColor brownColor];
+    menuBar.loopEnabled = YES;
     menuBar.horizontalMargin = 30.f;
     menuBar.vertialMargin = 20.f;
     menuBar.delegate = self;
     
-    UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 80.f, 40.f)];
-    [button1 setTitle:@"Fashion" forState:UIControlStateNormal];
-    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 40.f, 40.f)];
-    [button2 setTitle:@"IT" forState:UIControlStateNormal];
-    UIButton *button3 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 100.f, 40.f)];
-    [button3 setTitle:@"Technology" forState:UIControlStateNormal];
-    UIButton *button4 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 80.f, 40.f)];
-    [button4 setTitle:@"Culture" forState:UIControlStateNormal];
-    UIButton *button5 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 60.f, 40.f)];
-    [button5 setTitle:@"Music" forState:UIControlStateNormal];
-    UIButton *button6 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 70.f, 40.f)];
-    [button6 setTitle:@"Nature" forState:UIControlStateNormal];
-    UIButton *button7 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 50.f, 40.f)];
-    [button7 setTitle:@"Book" forState:UIControlStateNormal];
-    UIButton *button8 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 80.f, 40.f)];
-    [button8 setTitle:@"Literature" forState:UIControlStateNormal];
-    UIButton *button9 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 60.f, 40.f)];
-    [button9 setTitle:@"Human" forState:UIControlStateNormal];
+    UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 90.f, 40.f)];
+    [button1 setTitle:@"1.Fashion" forState:UIControlStateNormal];
+    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 50.f, 40.f)];
+    [button2 setTitle:@"2.IT" forState:UIControlStateNormal];
+    UIButton *button3 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 110.f, 40.f)];
+    [button3 setTitle:@"3.Technology" forState:UIControlStateNormal];
+    UIButton *button4 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 90.f, 40.f)];
+    [button4 setTitle:@"4.Culture" forState:UIControlStateNormal];
+    UIButton *button5 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 70.f, 40.f)];
+    [button5 setTitle:@"5.Music" forState:UIControlStateNormal];
+    UIButton *button6 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 80.f, 40.f)];
+    [button6 setTitle:@"6.Nature" forState:UIControlStateNormal];
+    UIButton *button7 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 60.f, 40.f)];
+    [button7 setTitle:@"7.Book" forState:UIControlStateNormal];
+    UIButton *button8 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 110.f, 40.f)];
+    [button8 setTitle:@"8.Literature" forState:UIControlStateNormal];
+    UIButton *button9 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 80.f, 40.f)];
+    [button9 setTitle:@"9.Human" forState:UIControlStateNormal];
     
     NSArray *buttons = @[button1, button2, button3, button4, button5, button6, button7, button8, button9];
     [menuBar addButtons:buttons];
+    _buttons = buttons;
     
     [self.view addSubview:menuBar];
 }
@@ -141,14 +144,21 @@
 
 #pragma mark - CORScrollMenuBarDelegate
 
-- (void)scrollMenuBar:(CORPagingScrollView *)scrolLMenuBar didTapButtonAtIndex:(NSInteger)index
+- (void)scrollMenuBar:(CORPagingScrollView *)scrollMenuBar didTapButtonAtIndex:(NSInteger)index
 {
     LOG(@"index : %d", index);
 }
 
-- (void)scrollMenuBar:(CORPagingScrollView *)scrolLMenuBar didTapButtonOfTag:(NSInteger)tag
+- (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didTapButtonOfTag:(NSInteger)tag
 {
     LOG(@"tag : %d", tag);
 }
+
+- (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didScrollToButtonAtIndex:(NSInteger)index
+{
+    UIButton *button = [_buttons objectAtIndex:index];
+    LOG(@"Center is %@", button.titleLabel.text);
+}
+
 
 @end

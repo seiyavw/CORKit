@@ -12,6 +12,7 @@
 
 @interface CORScrollMenuBar : UIView <UIScrollViewDelegate>
 
+@property (nonatomic) BOOL loopEnabled;
 @property (nonatomic) CGFloat vertialMargin;
 @property (nonatomic) CGFloat horizontalMargin;
 @property (nonatomic, weak) id <CORScrollMenuBarDelegate> delegate;
@@ -23,7 +24,8 @@
 @protocol CORScrollMenuBarDelegate <NSObject>
 
 @optional
-- (void)scrollMenuBar:(CORScrollMenuBar *)scrolLMenuBar didTapButtonOfTag:(NSInteger)tag;
-- (void)scrollMenuBar:(CORScrollMenuBar *)scrolLMenuBar didTapButtonAtIndex:(NSInteger)index;
+- (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didTapButtonOfTag:(NSInteger)tag;
+- (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didTapButtonAtIndex:(NSInteger)index;
+- (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didScrollToButtonAtIndex:(NSInteger)index;
 
 @end
