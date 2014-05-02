@@ -15,6 +15,7 @@
 @implementation CKSRootViewController
 {
     CORPagingScrollView *_scrollView;
+    CORScrollMenuBar *_menuBar;
     NSArray * _buttons;
 }
 
@@ -63,18 +64,13 @@
     [button4 setTitle:@"4.Culture" forState:UIControlStateNormal];
     UIButton *button5 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 70.f, 40.f)];
     [button5 setTitle:@"5.Music" forState:UIControlStateNormal];
-    UIButton *button6 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 80.f, 40.f)];
-    [button6 setTitle:@"6.Nature" forState:UIControlStateNormal];
-    UIButton *button7 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 60.f, 40.f)];
-    [button7 setTitle:@"7.Book" forState:UIControlStateNormal];
-    UIButton *button8 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 110.f, 40.f)];
-    [button8 setTitle:@"8.Literature" forState:UIControlStateNormal];
-    UIButton *button9 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 80.f, 40.f)];
-    [button9 setTitle:@"9.Human" forState:UIControlStateNormal];
+    UIButton *button6 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 110.f, 40.f)];
+    [button6 setTitle:@"6.Literature" forState:UIControlStateNormal];
     
-    NSArray *buttons = @[button1, button2, button3, button4, button5, button6, button7, button8, button9];
+    NSArray *buttons = @[button1, button2, button3, button4, button5, button6];
     [menuBar addButtons:buttons];
     _buttons = buttons;
+    _menuBar = menuBar;
     
     [self.view addSubview:menuBar];
 }
@@ -140,6 +136,7 @@
 - (void)scrollView:(CORPagingScrollView *)scrollView didMoveToPageAt:(NSInteger)pageIndex
 {
     LOG(@"page index %d", pageIndex);
+    [_menuBar moveToButtonAtIndex:pageIndex];
 }
 
 #pragma mark - CORScrollMenuBarDelegate
@@ -158,6 +155,8 @@
 {
     UIButton *button = [_buttons objectAtIndex:index];
     LOG(@"Center is %@", button.titleLabel.text);
+    
+    [_scrollView moveToPageAt:index];
 }
 
 

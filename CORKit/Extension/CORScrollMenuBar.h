@@ -18,6 +18,7 @@
 @property (nonatomic, weak) id <CORScrollMenuBarDelegate> delegate;
 
 - (void)addButtons:(NSArray *)buttons;
+- (void)moveToButtonAtIndex:(NSInteger)buttonIndex;
 
 @end
 

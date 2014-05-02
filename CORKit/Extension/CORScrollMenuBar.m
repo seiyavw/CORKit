@@ -23,6 +23,8 @@
     return self;
 }
 
+#pragma mark - private
+
 - (void)setupScrollView
 {
     _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
@@ -32,27 +34,6 @@
     _scrollView.delegate = self;
     _scrollView.decelerationRate = UIScrollViewDecelerationRateFast;
     [self addSubview:_scrollView];
-}
-
-- (void)addButtons:(NSArray *)buttons
-{
-    if (_buttons != nil)
-        return;
-    
-    CGFloat lastMaxX = 0;
-    
-    for (int i = 0, length = buttons.count; i < length; i++) {
-        
-        UIButton *button = [buttons objectAtIndex:i];
-        [button setFrame:CGRectMake(lastMaxX + _horizontalMargin, _vertialMargin, [button getWidth], [button getHeight])];
-        [button addTarget:self action:@selector(didTapMenuButton:) forControlEvents:UIControlEventTouchUpInside];
-        [_scrollView addSubview:button];
-        lastMaxX = CGRectGetMaxX(button.frame);
-    }
-    
-    [_scrollView setContentSize:CGSizeMake(lastMaxX + _horizontalMargin, [self getHeight])];
-    
-    _buttons = buttons;
 }
 
 - (void)didTapMenuButton:(id)sender
@@ -78,7 +59,6 @@
 
 /**
  * Rearrange all button and adjust scroll offset for loop
- *
  */
 - (void)rearrangeButtonsWithCenterIndex:(NSInteger)centerIndex
 {
@@ -204,6 +184,59 @@
             }
         }];
     }
+}
+
+#pragma mark - public
+
+/**
+ * add and layout buttons
+ *
+ * @param array of buttons
+ *
+ * @return void
+ */
+- (void)addButtons:(NSArray *)buttons
+{
+    if (_buttons != nil)
+        return;
+    
+    CGFloat lastMaxX = 0;
+    
+    for (int i = 0, length = buttons.count; i < length; i++) {
+        
+        UIButton *button = [buttons objectAtIndex:i];
+        [button setFrame:CGRectMake(lastMaxX + _horizontalMargin, _vertialMargin, [button getWidth], [button getHeight])];
+        [button addTarget:self action:@selector(didTapMenuButton:) forControlEvents:UIControlEventTouchUpInside];
+        [_scrollView addSubview:button];
+        lastMaxX = CGRectGetMaxX(button.frame);
+    }
+    
+    [_scrollView setContentSize:CGSizeMake(lastMaxX + _horizontalMargin, [self getHeight])];
+    
+    _buttons = buttons;
+}
+
+/**
+ * move to a specified page index
+ *
+ * @param page index number
+ *
+ * @return void
+ */
+- (void)moveToButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex> _buttons.count - 1)
+        return; // beyond array capacity
+    
+    UIButton *centerButton = [_buttons objectAtIndex:buttonIndex];
+    
+    // in this case, delegate method is not called in completion block
+    __weak typeof (self) weakSelf = self;
+    [self scrollToCenterOfButton:centerButton animated:YES completion:^(BOOL finished) {
+        if (_loopEnabled) {
+            [weakSelf rearrangeButtonsWithCenterIndex:buttonIndex];
+        }
+    }];
 
 }
 

@@ -143,19 +143,21 @@
 /**
  * move to a specified page index
  *
- * @param Page Index
+ * @param page index number
  *
  * @return void
  */
 - (void)moveToPageAt:(NSInteger)pageIndex
 {
     if (pageIndex > _pages.count - 1)
-        return; // beyond the number of pages
+        return; // beyond array capacity
     
     _currentIndex = pageIndex; // set index
     
-    // update pages
-    [self handlePaging];
+    if (_loopEnabled) {
+        // rearrange
+        [self rearrangePages];
+    }
 }
 
 #pragma mark - UIScrollViewDelegate
