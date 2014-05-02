@@ -66,8 +66,14 @@
     [button5 setTitle:@"5.Music" forState:UIControlStateNormal];
     UIButton *button6 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 110.f, 40.f)];
     [button6 setTitle:@"6.Literature" forState:UIControlStateNormal];
+    UIButton *button7 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 70.f, 40.f)];
+    [button7 setTitle:@"7.Book" forState:UIControlStateNormal];
+    UIButton *button8 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 110.f, 40.f)];
+    [button8 setTitle:@"8.Literature" forState:UIControlStateNormal];
+    UIButton *button9 = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 80.f, 40.f)];
+    [button9 setTitle:@"9.Human" forState:UIControlStateNormal];
     
-    NSArray *buttons = @[button1, button2, button3, button4, button5, button6];
+    NSArray *buttons = @[button1, button2, button3, button4, button5, button6, button7, button8, button9];
     [menuBar addButtons:buttons];
     _buttons = buttons;
     _menuBar = menuBar;
@@ -79,49 +85,20 @@
 {
     CORPagingScrollView *scrollView = [[CORPagingScrollView alloc] initWithFrame:CGRectMake(0.f, 64.f, 320.f, [self.view getHeight] - 64.f)];
     
-    UIView *view1 = [[UIView alloc] initWithFrame:scrollView.bounds];
-    view1.backgroundColor = [UIColor redColor];
-    UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 200.f, 40.f)];
-    label1.center = view1.center;
-    [label1 setText:@"1"];
-    [view1 addSubview:label1];
+    NSMutableArray *pages = @[].mutableCopy;
+    for (int i = 0; i < 9; i++) {
+        UIView *view = [[UIView alloc] initWithFrame:scrollView.bounds];
+        view.backgroundColor = [UIColor colorWithHue:0.1 * i saturation:1.0 brightness:1.0 alpha:1.0];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 200.f, 40.f)];
+        label.textAlignment = NSTextAlignmentCenter;
+        [label setFont:[UIFont systemFontOfSize:24.f]];
+        label.center = view.center;
+        [label setText:[NSString stringWithFormat:@"%d", i + 1]];
+        [view addSubview:label];
+        [pages addObject:view];
     
-    UIView *view2 = [[UIView alloc] initWithFrame:scrollView.bounds];
-    view2.backgroundColor = [UIColor greenColor];
-    UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 200.f, 40.f)];
-    label2.center = view1.center;
-    [label2 setText:@"2"];
-    [view2 addSubview:label2];
+    }
     
-    UIView *view3 = [[UIView alloc] initWithFrame:scrollView.bounds];
-    view3.backgroundColor = [UIColor blueColor];
-    UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 200.f, 40.f)];
-    label3.center = view1.center;
-    [label3 setText:@"3"];
-    [view3 addSubview:label3];
-    
-    UIView *view4 = [[UIView alloc] initWithFrame:scrollView.bounds];
-    view4.backgroundColor = [UIColor orangeColor];
-    UILabel *label4 = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 200.f, 40.f)];
-    label4.center = view1.center;
-    [label4 setText:@"4"];
-    [view4 addSubview:label4];
-    
-    UIView *view5 = [[UIView alloc] initWithFrame:scrollView.bounds];
-    view5.backgroundColor = [UIColor purpleColor];
-    UILabel *label5 = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 200.f, 40.f)];
-    label5.center = view1.center;
-    [label5 setText:@"5"];
-    [view5 addSubview:label5];
-    
-    UIView *view6 = [[UIView alloc] initWithFrame:scrollView.bounds];
-    view6.backgroundColor = [UIColor yellowColor];
-    UILabel *label6 = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 200.f, 40.f)];
-    label6.center = view1.center;
-    [label6 setText:@"6"];
-    [view6 addSubview:label6];
-    
-    NSArray *pages = @[view1, view2, view3, view4, view5, view6];
     scrollView.loopEnabled = YES;
     [scrollView addPages:pages];
     scrollView.delegate = self;
