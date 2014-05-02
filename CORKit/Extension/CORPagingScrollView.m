@@ -149,8 +149,8 @@
  */
 - (void)moveToPageAt:(NSInteger)pageIndex
 {
-    if (pageIndex > _pages.count - 1)
-        return; // beyond array capacity
+    if (pageIndex > _pages.count - 1 || _currentIndex == pageIndex)
+        return; // beyond array capacity or the same index
     
     _currentIndex = pageIndex; // set index
     

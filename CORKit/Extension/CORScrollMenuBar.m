@@ -11,6 +11,7 @@
 @implementation CORScrollMenuBar
 {
     UIScrollView *_scrollView;
+    NSInteger _currentIndex;
     NSArray *_buttons;
 }
 
@@ -171,9 +172,17 @@
     }
     
     if (centerButton != nil) {
+        
         NSInteger buttonIndex = [_buttons indexOfObject:centerButton];
         __weak typeof (self) weakSelf = self;
         [self scrollToCenterOfButton:centerButton animated:YES completion:^(BOOL finished) {
+            
+            if (_currentIndex == buttonIndex)
+                return; // if the same index, no changes
+            
+            // update index
+            _currentIndex = buttonIndex;
+            
             if (_loopEnabled) {
                 [weakSelf rearrangeButtonsWithCenterIndex:buttonIndex];
             }
@@ -225,15 +234,16 @@
  */
 - (void)moveToButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex> _buttons.count - 1)
+    if (buttonIndex > _buttons.count - 1)
         return; // beyond array capacity
     
     UIButton *centerButton = [_buttons objectAtIndex:buttonIndex];
-    
     // in this case, delegate method is not called in completion block
     __weak typeof (self) weakSelf = self;
     [self scrollToCenterOfButton:centerButton animated:YES completion:^(BOOL finished) {
-        if (_loopEnabled) {
+        
+        if (_loopEnabled && _currentIndex != buttonIndex) {
+            _currentIndex = buttonIndex;
             [weakSelf rearrangeButtonsWithCenterIndex:buttonIndex];
         }
     }];
