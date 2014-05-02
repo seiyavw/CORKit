@@ -1,6 +1,6 @@
 //
 //  CORPagingScrollView.h
-//  CORKitSample
+//  CORKit
 //
 //  Created by Seiya Sasaki on 2014/05/01.
 //  Copyright (c) 2014年 corleonis.jp. All rights reserved.
