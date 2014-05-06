@@ -11,8 +11,8 @@
 @interface CORScrollContentViewController : UIViewController
 {
     @protected
-    IBOutlet UIScrollView *_scrolLView;
-    IBOutlet UIView *_scrollContentView;
+    __weak IBOutlet UIScrollView *_scrollView;
+    __weak IBOutlet UIView *_scrollContentView;
 }
 
 @end

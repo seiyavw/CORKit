@@ -7,12 +7,16 @@
 //
 
 #import "CORAudioSlider.h"
-#import "CORBaseViewController.h"
+#import "CORTransparentViewController.h"
 #import "CORBlendView.h"
 #import "CORDefaultCell.h"
 #import "CORNavigationButton.h"
 #import "CORScrollContentViewController.h"
 #import "CORWindowView.h"
+#import "CORPagingScrollView.h"
+#import "CORScrollMenuBar.h"
+#import "CORProcessView.h"
+#import "CORAutoLoadViewController.h"
 
 #import "NSString+COR.h"
 #import "NSDate+COR.h"

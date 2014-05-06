@@ -7,7 +7,7 @@
 //
 
 #import "CKSAppDelegate.h"
-#import "CKSRootViewController.h"
+#import "CKSTutorialViewController.h"
 
 @implementation CKSAppDelegate
 
@@ -16,7 +16,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [CKSRootViewController new];
+    self.window.rootViewController = [CKSTutorialViewController new];
     [self.window makeKeyAndVisible];
     return YES;
 }

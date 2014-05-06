@@ -1,5 +1,5 @@
 //
-//  CKSRootViewController.h
+//  CKSPagingViewController.h
 //  CORKitSample
 //
 //  Created by Seiya Sasaki on 2014/04/04.
@@ -10,6 +10,6 @@
 #import "CORPagingScrollView.h"
 #import "CORScrollMenuBar.h"
 
-@interface CKSRootViewController : UIViewController <CORPagingScrollViewDelegate, CORScrollMenuBarDelegate>
+@interface CKSPagingViewController : UIViewController <CORPagingScrollViewDelegate, CORScrollMenuBarDelegate>
 
 @end

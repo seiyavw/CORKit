@@ -1,24 +1,23 @@
 //
-//  CORBaseViewController.m
+//  CORTransparentViewController.m
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/02/20.
 //  Copyright (c) 2014年 Seiya Sasaki. All rights reserved.
 //
 
-#import "CORBaseViewController.h"
+#import "CORTransparentViewController.h"
 #import "UIViewController+COR.h"
 
-@interface CORBaseViewController ()
+@interface CORTransparentViewController ()
 
 @end
 
-@implementation CORBaseViewController
+@implementation CORTransparentViewController
 {
     UIViewController *_presentedViewController;
-    CORBaseViewControllerPresentCompletion _presentCompletion;
-    CORBaseViewControllerPresentCompletion _dismissCompletion;
-
+    CORTransparentPresentCompletion _presentCompletion;
+    CORTransparentPresentCompletion _dismissCompletion;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,7 +41,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)presentTransparentViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(CORBaseViewControllerPresentCompletion)completion
+- (void)presentTransparentViewController:(UIViewController *)viewController animated:(BOOL)animated completion:(CORTransparentPresentCompletion)completion
 {
     [self containerAddChildViewController:viewController];
     
@@ -66,7 +65,7 @@
     [viewController.view.layer addAnimation:animation forKey:@"presentAnimation"];
 }
 
-- (void)dismissTransparentViewControllerAnimated:(BOOL)animated completion:(CORBaseViewControllerPresentCompletion)completion
+- (void)dismissTransparentViewControllerAnimated:(BOOL)animated completion:(CORTransparentPresentCompletion)completion
 {
     if (!animated) {
         

@@ -10,6 +10,8 @@
 		9F48FA73191231F000EA1498 /* CORScrollMenuBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F48FA72191231F000EA1498 /* CORScrollMenuBar.m */; };
 		9F97322B18EEBAB400B13F59 /* NSDate+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F97322A18EEBAB400B13F59 /* NSDate+COR.m */; };
 		9F9B1D761911D2F80047341B /* CORPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B1D751911D2F80047341B /* CORPagingScrollView.m */; };
+		9FA9FE9B1918B8C8002D085C /* CORScrollContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9FE9A1918B8C8002D085C /* CORScrollContentViewController.m */; };
+		9FA9FEA11918CBC4002D085C /* CORAutoLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9FEA01918CBC4002D085C /* CORAutoLoadViewController.m */; };
 		9FAE730518EE4C35004CDCA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730418EE4C35004CDCA8 /* Foundation.framework */; };
 		9FAE730718EE4C35004CDCA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730618EE4C35004CDCA8 /* CoreGraphics.framework */; };
 		9FAE730918EE4C35004CDCA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730818EE4C35004CDCA8 /* UIKit.framework */; };
@@ -30,13 +32,17 @@
 		9FAE735C18EE4C5E004CDCA8 /* UIView+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734118EE4C5E004CDCA8 /* UIView+COR.m */; };
 		9FAE735D18EE4C5E004CDCA8 /* UIViewController+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734318EE4C5E004CDCA8 /* UIViewController+COR.m */; };
 		9FAE735E18EE4C5E004CDCA8 /* CORAudioSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734618EE4C5E004CDCA8 /* CORAudioSlider.m */; };
-		9FAE735F18EE4C5E004CDCA8 /* CORBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734818EE4C5E004CDCA8 /* CORBaseViewController.m */; };
+		9FAE735F18EE4C5E004CDCA8 /* CORTransparentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734818EE4C5E004CDCA8 /* CORTransparentViewController.m */; };
 		9FAE736018EE4C5E004CDCA8 /* CORBlendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734A18EE4C5E004CDCA8 /* CORBlendView.m */; };
 		9FAE736118EE4C5E004CDCA8 /* CORDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734C18EE4C5E004CDCA8 /* CORDefaultCell.m */; };
 		9FAE736218EE4C5E004CDCA8 /* CORNavigationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE734E18EE4C5E004CDCA8 /* CORNavigationButton.m */; };
-		9FAE736318EE4C5E004CDCA8 /* CORScrollContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE735018EE4C5E004CDCA8 /* CORScrollContentViewController.m */; };
-		9FAE736418EE4C5E004CDCA8 /* CORWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE735218EE4C5E004CDCA8 /* CORWindowView.m */; };
-		9FAE736B18EE4C98004CDCA8 /* CKSRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE736A18EE4C98004CDCA8 /* CKSRootViewController.m */; };
+		9FAE736418EE4C5E004CDCA8 /* COROnWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE735218EE4C5E004CDCA8 /* COROnWindowView.m */; };
+		9FD8DAD61915F0FA00FABB64 /* CORProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD8DAD51915F0FA00FABB64 /* CORProcessView.m */; };
+		9FD8DAE01915F8E800FABB64 /* CKSPagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD8DADD1915F8E800FABB64 /* CKSPagingViewController.m */; };
+		9FD8DAE81915F9B200FABB64 /* CKSTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD8DAE61915F9B200FABB64 /* CKSTutorialViewController.m */; };
+		9FD8DAE91915F9B200FABB64 /* CKSTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD8DAE71915F9B200FABB64 /* CKSTutorialViewController.xib */; };
+		9FD8DAED1915FB1800FABB64 /* sample@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FD8DAEC1915FB1800FABB64 /* sample@2x.png */; };
+		9FD8DAEF1915FE8000FABB64 /* sample2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FD8DAEE1915FE8000FABB64 /* sample2@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,10 @@
 		9F97322A18EEBAB400B13F59 /* NSDate+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+COR.m"; sourceTree = "<group>"; };
 		9F9B1D741911D2F80047341B /* CORPagingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORPagingScrollView.h; sourceTree = "<group>"; };
 		9F9B1D751911D2F80047341B /* CORPagingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORPagingScrollView.m; sourceTree = "<group>"; };
+		9FA9FE991918B8C8002D085C /* CORScrollContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORScrollContentViewController.h; sourceTree = "<group>"; };
+		9FA9FE9A1918B8C8002D085C /* CORScrollContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORScrollContentViewController.m; sourceTree = "<group>"; };
+		9FA9FE9F1918CBC4002D085C /* CORAutoLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORAutoLoadViewController.h; sourceTree = "<group>"; };
+		9FA9FEA01918CBC4002D085C /* CORAutoLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORAutoLoadViewController.m; sourceTree = "<group>"; };
 		9FAE730118EE4C35004CDCA8 /* CORKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CORKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FAE730418EE4C35004CDCA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9FAE730618EE4C35004CDCA8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,21 +99,26 @@
 		9FAE734318EE4C5E004CDCA8 /* UIViewController+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+COR.m"; sourceTree = "<group>"; };
 		9FAE734518EE4C5E004CDCA8 /* CORAudioSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORAudioSlider.h; sourceTree = "<group>"; };
 		9FAE734618EE4C5E004CDCA8 /* CORAudioSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORAudioSlider.m; sourceTree = "<group>"; };
-		9FAE734718EE4C5E004CDCA8 /* CORBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORBaseViewController.h; sourceTree = "<group>"; };
-		9FAE734818EE4C5E004CDCA8 /* CORBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORBaseViewController.m; sourceTree = "<group>"; };
+		9FAE734718EE4C5E004CDCA8 /* CORTransparentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORTransparentViewController.h; sourceTree = "<group>"; };
+		9FAE734818EE4C5E004CDCA8 /* CORTransparentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORTransparentViewController.m; sourceTree = "<group>"; };
 		9FAE734918EE4C5E004CDCA8 /* CORBlendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORBlendView.h; sourceTree = "<group>"; };
 		9FAE734A18EE4C5E004CDCA8 /* CORBlendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORBlendView.m; sourceTree = "<group>"; };
 		9FAE734B18EE4C5E004CDCA8 /* CORDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORDefaultCell.h; sourceTree = "<group>"; };
 		9FAE734C18EE4C5E004CDCA8 /* CORDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORDefaultCell.m; sourceTree = "<group>"; };
 		9FAE734D18EE4C5E004CDCA8 /* CORNavigationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORNavigationButton.h; sourceTree = "<group>"; };
 		9FAE734E18EE4C5E004CDCA8 /* CORNavigationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORNavigationButton.m; sourceTree = "<group>"; };
-		9FAE734F18EE4C5E004CDCA8 /* CORScrollContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORScrollContentViewController.h; sourceTree = "<group>"; };
-		9FAE735018EE4C5E004CDCA8 /* CORScrollContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORScrollContentViewController.m; sourceTree = "<group>"; };
-		9FAE735118EE4C5E004CDCA8 /* CORWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORWindowView.h; sourceTree = "<group>"; };
-		9FAE735218EE4C5E004CDCA8 /* CORWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORWindowView.m; sourceTree = "<group>"; };
+		9FAE735118EE4C5E004CDCA8 /* COROnWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COROnWindowView.h; sourceTree = "<group>"; };
+		9FAE735218EE4C5E004CDCA8 /* COROnWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COROnWindowView.m; sourceTree = "<group>"; };
 		9FAE735618EE4C5E004CDCA8 /* CORMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORMacros.h; sourceTree = "<group>"; };
-		9FAE736918EE4C98004CDCA8 /* CKSRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSRootViewController.h; sourceTree = "<group>"; };
-		9FAE736A18EE4C98004CDCA8 /* CKSRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSRootViewController.m; sourceTree = "<group>"; };
+		9FD8DAD41915F0FA00FABB64 /* CORProcessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORProcessView.h; sourceTree = "<group>"; };
+		9FD8DAD51915F0FA00FABB64 /* CORProcessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORProcessView.m; sourceTree = "<group>"; };
+		9FD8DADC1915F8E800FABB64 /* CKSPagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSPagingViewController.h; sourceTree = "<group>"; };
+		9FD8DADD1915F8E800FABB64 /* CKSPagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSPagingViewController.m; sourceTree = "<group>"; };
+		9FD8DAE51915F9B200FABB64 /* CKSTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSTutorialViewController.h; sourceTree = "<group>"; };
+		9FD8DAE61915F9B200FABB64 /* CKSTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSTutorialViewController.m; sourceTree = "<group>"; };
+		9FD8DAE71915F9B200FABB64 /* CKSTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKSTutorialViewController.xib; sourceTree = "<group>"; };
+		9FD8DAEC1915FB1800FABB64 /* sample@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample@2x.png"; sourceTree = "<group>"; };
+		9FD8DAEE1915FE8000FABB64 /* sample2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample2@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,10 +179,10 @@
 		9FAE730A18EE4C35004CDCA8 /* CORKitSample */ = {
 			isa = PBXGroup;
 			children = (
+				9FD8DAEA1915FB1800FABB64 /* Resources */,
+				9FD8DADA1915F8E800FABB64 /* Classes */,
 				9FAE731318EE4C35004CDCA8 /* CKSAppDelegate.h */,
 				9FAE731418EE4C35004CDCA8 /* CKSAppDelegate.m */,
-				9FAE736918EE4C98004CDCA8 /* CKSRootViewController.h */,
-				9FAE736A18EE4C98004CDCA8 /* CKSRootViewController.m */,
 				9FAE731618EE4C35004CDCA8 /* Images.xcassets */,
 				9FAE730B18EE4C35004CDCA8 /* Supporting Files */,
 			);
@@ -251,22 +266,26 @@
 			children = (
 				9FAE734518EE4C5E004CDCA8 /* CORAudioSlider.h */,
 				9FAE734618EE4C5E004CDCA8 /* CORAudioSlider.m */,
-				9FAE734718EE4C5E004CDCA8 /* CORBaseViewController.h */,
-				9FAE734818EE4C5E004CDCA8 /* CORBaseViewController.m */,
+				9FAE734718EE4C5E004CDCA8 /* CORTransparentViewController.h */,
+				9FAE734818EE4C5E004CDCA8 /* CORTransparentViewController.m */,
 				9FAE734918EE4C5E004CDCA8 /* CORBlendView.h */,
 				9FAE734A18EE4C5E004CDCA8 /* CORBlendView.m */,
 				9FAE734B18EE4C5E004CDCA8 /* CORDefaultCell.h */,
 				9FAE734C18EE4C5E004CDCA8 /* CORDefaultCell.m */,
+				9FA9FE991918B8C8002D085C /* CORScrollContentViewController.h */,
+				9FA9FE9A1918B8C8002D085C /* CORScrollContentViewController.m */,
+				9FA9FE9F1918CBC4002D085C /* CORAutoLoadViewController.h */,
+				9FA9FEA01918CBC4002D085C /* CORAutoLoadViewController.m */,
 				9FAE734D18EE4C5E004CDCA8 /* CORNavigationButton.h */,
 				9FAE734E18EE4C5E004CDCA8 /* CORNavigationButton.m */,
-				9FAE734F18EE4C5E004CDCA8 /* CORScrollContentViewController.h */,
-				9FAE735018EE4C5E004CDCA8 /* CORScrollContentViewController.m */,
-				9FAE735118EE4C5E004CDCA8 /* CORWindowView.h */,
-				9FAE735218EE4C5E004CDCA8 /* CORWindowView.m */,
+				9FAE735118EE4C5E004CDCA8 /* COROnWindowView.h */,
+				9FAE735218EE4C5E004CDCA8 /* COROnWindowView.m */,
 				9F9B1D741911D2F80047341B /* CORPagingScrollView.h */,
 				9F9B1D751911D2F80047341B /* CORPagingScrollView.m */,
 				9F48FA71191231F000EA1498 /* CORScrollMenuBar.h */,
 				9F48FA72191231F000EA1498 /* CORScrollMenuBar.m */,
+				9FD8DAD41915F0FA00FABB64 /* CORProcessView.h */,
+				9FD8DAD51915F0FA00FABB64 /* CORProcessView.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -277,6 +296,43 @@
 				9FAE735618EE4C5E004CDCA8 /* CORMacros.h */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		9FD8DADA1915F8E800FABB64 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9FD8DADB1915F8E800FABB64 /* Scenes */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9FD8DADB1915F8E800FABB64 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9FD8DADC1915F8E800FABB64 /* CKSPagingViewController.h */,
+				9FD8DADD1915F8E800FABB64 /* CKSPagingViewController.m */,
+				9FD8DAE51915F9B200FABB64 /* CKSTutorialViewController.h */,
+				9FD8DAE61915F9B200FABB64 /* CKSTutorialViewController.m */,
+				9FD8DAE71915F9B200FABB64 /* CKSTutorialViewController.xib */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9FD8DAEA1915FB1800FABB64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FD8DAEB1915FB1800FABB64 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9FD8DAEB1915FB1800FABB64 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9FD8DAEC1915FB1800FABB64 /* sample@2x.png */,
+				9FD8DAEE1915FE8000FABB64 /* sample2@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,7 +411,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD8DAED1915FB1800FABB64 /* sample@2x.png in Resources */,
+				9FD8DAE91915F9B200FABB64 /* CKSTutorialViewController.xib in Resources */,
 				9FAE730F18EE4C35004CDCA8 /* InfoPlist.strings in Resources */,
+				9FD8DAEF1915FE8000FABB64 /* sample2@2x.png in Resources */,
 				9FAE731718EE4C35004CDCA8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,25 +435,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FAE735E18EE4C5E004CDCA8 /* CORAudioSlider.m in Sources */,
-				9FAE736418EE4C5E004CDCA8 /* CORWindowView.m in Sources */,
+				9FAE736418EE4C5E004CDCA8 /* COROnWindowView.m in Sources */,
 				9FAE736018EE4C5E004CDCA8 /* CORBlendView.m in Sources */,
 				9FAE735B18EE4C5E004CDCA8 /* UIStoryboard+COR.m in Sources */,
 				9FAE735A18EE4C5E004CDCA8 /* UINavigationController+COR.m in Sources */,
-				9FAE736318EE4C5E004CDCA8 /* CORScrollContentViewController.m in Sources */,
 				9FAE731518EE4C35004CDCA8 /* CKSAppDelegate.m in Sources */,
 				9F97322B18EEBAB400B13F59 /* NSDate+COR.m in Sources */,
 				9FAE735D18EE4C5E004CDCA8 /* UIViewController+COR.m in Sources */,
-				9FAE735F18EE4C5E004CDCA8 /* CORBaseViewController.m in Sources */,
-				9FAE736B18EE4C98004CDCA8 /* CKSRootViewController.m in Sources */,
+				9FAE735F18EE4C5E004CDCA8 /* CORTransparentViewController.m in Sources */,
 				9FAE735718EE4C5E004CDCA8 /* NSString+COR.m in Sources */,
 				9FAE736218EE4C5E004CDCA8 /* CORNavigationButton.m in Sources */,
 				9FAE736118EE4C5E004CDCA8 /* CORDefaultCell.m in Sources */,
 				9FAE735818EE4C5E004CDCA8 /* UIDevice+COR.m in Sources */,
+				9FD8DAE81915F9B200FABB64 /* CKSTutorialViewController.m in Sources */,
 				9FAE731118EE4C35004CDCA8 /* main.m in Sources */,
 				9FAE735918EE4C5E004CDCA8 /* UIImage+COR.m in Sources */,
 				9F9B1D761911D2F80047341B /* CORPagingScrollView.m in Sources */,
+				9FD8DAE01915F8E800FABB64 /* CKSPagingViewController.m in Sources */,
+				9FD8DAD61915F0FA00FABB64 /* CORProcessView.m in Sources */,
 				9F48FA73191231F000EA1498 /* CORScrollMenuBar.m in Sources */,
+				9FA9FE9B1918B8C8002D085C /* CORScrollContentViewController.m in Sources */,
 				9FAE735C18EE4C5E004CDCA8 /* UIView+COR.m in Sources */,
+				9FA9FEA11918CBC4002D085C /* CORAutoLoadViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

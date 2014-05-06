@@ -1,5 +1,5 @@
 //
-//  CORWindowView.h
+//  COROnWindowView.h
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/01/28.
@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CORWindowView : UIView
+@interface COROnWindowView : UIView
 
 - (void)setup;
 + (void)show;
 + (void)hide;
-- (void)prepareToShow;
 - (void)showSharedView;
 - (void)hideSharedView;
 

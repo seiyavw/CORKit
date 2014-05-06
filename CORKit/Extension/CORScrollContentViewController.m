@@ -27,15 +27,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if (_scrollView != nil && _scrollContentView != nil) {
+        [_scrollView addSubview:_scrollContentView];
+    }
 }
 
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    // layout
     
+    if (_scrollView != nil && _scrollContentView != nil) {
+        [_scrollView setContentSize:_scrollContentView.frame.size];
+    }
     
-    // layout
     [self.view layoutSubviews];
 }
 
@@ -44,16 +49,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // PaCOR the selected object to the new view controller.
-}
-*/
 
 @end

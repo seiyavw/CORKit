@@ -26,6 +26,8 @@
 // get weak reference of self by SELF
 #define PREPARE_SELF __weak typeof(self) SELF = self
 
+// shows reference count on console
+#define LogReferenceCount(obj) NSLog(@"[%@] reference count = %ld", [obj class], CFGetRetainCount((__bridge void*)obj))
 
 // debug log
 #ifdef DEBUG

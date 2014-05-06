@@ -6,12 +6,14 @@ This framework is currently in alpha.
 ### Extensions
 - CORPagingScrollView
 - CORScrollMenuBar
+- CORAutoLoadViewController
+- CORProcessView
 - CORAudioSlider
 - CORDefaultCell
 - CORBaseViewController
 - CORBlendView
 - CORNavigationButton
-- CORWindowView
+- COROnWindowView
 
 ### Categories
 - NSString
