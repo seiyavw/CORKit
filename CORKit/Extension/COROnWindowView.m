@@ -10,7 +10,7 @@
 
 @implementation COROnWindowView
 
-+ (COROnWindowView *)sharedView {
++ (COROnWindowView *)createInstance {
     
     return [[self alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -33,12 +33,12 @@
 
 + (void)show
 {
-    [[self sharedView] show];
+    [[self createInstance] show];
 }
 
 + (void)hide
 {
-    [[self sharedView] hide];
+    [[self createInstance] hide];
 }
 
 - (void)show
