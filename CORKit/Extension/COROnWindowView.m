@@ -36,15 +36,15 @@
 
 + (void)show
 {
-    [[self sharedView] showSharedView];
+    [[self sharedView] show];
 }
 
 + (void)hide
 {
-    [[self sharedView] hideSharedView];
+    [[self sharedView] hide];
 }
 
-- (void)showSharedView
+- (void)show
 {
     [[UIApplication sharedApplication].delegate.window addSubview:self];
     
@@ -58,7 +58,7 @@
     
 }
 
-- (void)hideSharedView
+- (void)hide
 {
     __weak typeof (self) weakSelf = self;
     
