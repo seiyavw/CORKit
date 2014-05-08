@@ -62,7 +62,7 @@
 {
     __weak typeof (self) weakSelf = self;
     
-    [UIView animateWithDuration:0.3f delay:0.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.3f delay:0.f options:UIViewAnimationOptionCurveEaseOut animations:^{
         weakSelf.alpha = 0.f;
     } completion:^(BOOL finished) {
         [weakSelf removeFromSuperview];
