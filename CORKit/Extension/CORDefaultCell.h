@@ -13,6 +13,7 @@
     @protected
     UIColor *_normalStateColor;
     UIColor *_highlightedColor;
+    UIColor *_selectedColor;
 }
 
 @end

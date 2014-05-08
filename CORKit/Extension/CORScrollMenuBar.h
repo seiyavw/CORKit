@@ -25,7 +25,7 @@
 @protocol CORScrollMenuBarDelegate <NSObject>
 
 @optional
-- (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didTapButtonOfTag:(NSInteger)tag;
+- (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didTapButton:(UIButton *)button;
 - (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didTapButtonAtIndex:(NSInteger)index;
 - (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didScrollToButtonAtIndex:(NSInteger)index;
 

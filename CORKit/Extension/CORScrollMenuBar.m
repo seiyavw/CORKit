@@ -42,17 +42,16 @@
     UIButton *button = (UIButton *)sender;
     
     if (self.delegate != nil &&
-        [self.delegate respondsToSelector:@selector(scrollMenuBar:didTapButtonOfTag:)]) {
+        [self.delegate respondsToSelector:@selector(scrollMenuBar:didTapButton:)]) {
         
-        // tell a button index
-        NSInteger tag = button.tag;
-        [self.delegate scrollMenuBar:self didTapButtonOfTag:tag];
+        // deliver button instance
+        [self.delegate scrollMenuBar:self didTapButton:button];
     }
     
     if (self.delegate != nil &&
         [self.delegate respondsToSelector:@selector(scrollMenuBar:didTapButtonAtIndex:)]) {
         
-        // tell a button tag
+        // tell a button index
         NSInteger index = [_buttons indexOfObject:button];
         [self.delegate scrollMenuBar:self didTapButtonAtIndex:index];
     }
@@ -86,7 +85,7 @@
     }
     
     // arrange new array
-    for (int i = 0, length = _buttons.count; i < length; i++) {
+    for (NSInteger i = 0, length = _buttons.count; i < length; i++) {
         
         NSInteger pageIndex = i + (int)(visibleIndex - centerIndex);
         
@@ -211,7 +210,7 @@
     
     CGFloat lastMaxX = 0;
     
-    for (int i = 0, length = buttons.count; i < length; i++) {
+    for (NSInteger i = 0, length = buttons.count; i < length; i++) {
         
         UIButton *button = [buttons objectAtIndex:i];
         [button setFrame:CGRectMake(lastMaxX + _horizontalMargin, _vertialMargin, [button getWidth], [button getHeight])];

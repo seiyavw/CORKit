@@ -57,9 +57,9 @@
         
         if (self.selectionStyle != UITableViewCellSelectionStyleNone) {
             
-            if (_highlightedColor != nil) {
+            if (_selectedColor != nil) {
                 
-                self.backgroundColor = _highlightedColor;
+                self.backgroundColor = _selectedColor;
                 
             } else {
                 

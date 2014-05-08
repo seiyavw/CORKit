@@ -87,6 +87,7 @@
     
     NSMutableArray *pages = @[].mutableCopy;
     for (int i = 0; i < 9; i++) {
+        
         UIView *view = [[UIView alloc] initWithFrame:scrollView.bounds];
         view.backgroundColor = [UIColor colorWithHue:0.1 * i saturation:1.0 brightness:1.0 alpha:1.0];
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 200.f, 40.f)];
@@ -96,7 +97,6 @@
         [label setText:[NSString stringWithFormat:@"%d", i + 1]];
         [view addSubview:label];
         [pages addObject:view];
-    
     }
     
     scrollView.loopEnabled = YES;
@@ -123,9 +123,9 @@
     LOG(@"index : %d", index);
 }
 
-- (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didTapButtonOfTag:(NSInteger)tag
+- (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didTapButton:(UIButton *)button
 {
-    LOG(@"tag : %d", tag);
+    LOG(@"%@ is tapped.", button);
 }
 
 - (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didScrollToButtonAtIndex:(NSInteger)index
@@ -135,6 +135,5 @@
     
     [_scrollView moveToPageAt:index];
 }
-
 
 @end

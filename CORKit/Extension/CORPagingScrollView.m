@@ -65,7 +65,7 @@
     //(0  1  2  3)
     //
     
-    for (int i = 0, length = _pages.count; i < length; i++) {
+    for (NSInteger i = 0, length = _pages.count; i < length; i++) {
         
         NSInteger pageIndex = i + (int)(visibleIndex - _currentIndex);
         
@@ -118,7 +118,7 @@
     
     CGFloat contentWidth = 0;
     
-    for (int i = 0, length = pages.count; i < length; i++) {
+    for (NSInteger i = 0, length = pages.count; i < length; i++) {
         
         UIView *view = [pages objectAtIndex:i];
         CGFloat width = [view getWidth];
