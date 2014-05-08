@@ -12,7 +12,7 @@
 #import "CORDefaultCell.h"
 #import "CORNavigationButton.h"
 #import "CORScrollContentViewController.h"
-#import "CORWindowView.h"
+#import "COROnWindowView.h"
 #import "CORPagingScrollView.h"
 #import "CORScrollMenuBar.h"
 #import "CORProcessView.h"
