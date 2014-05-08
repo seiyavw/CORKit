@@ -7,6 +7,7 @@
 //
 
 #import "CORProcessView.h"
+#import "UIView+COR.h"
 
 CORPosition CORPositionMake(CGFloat top, CGFloat right, CGFloat bottom, CGFloat left)
 {
@@ -46,7 +47,7 @@ static NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
 
 - (void)dealloc
 {
-    LOG(@"dealloc");
+//    NSLog(@"dealloc");
 }
 
 #pragma mark - public
