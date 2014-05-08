@@ -11,12 +11,9 @@
 @implementation COROnWindowView
 
 + (COROnWindowView *)sharedView {
-    static dispatch_once_t once;
-    static COROnWindowView *sharedView;
-    dispatch_once(&once, ^ {
-        sharedView = [[self alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    });
-    return sharedView;
+    
+    return [[self alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
 }
 
 - (id)initWithFrame:(CGRect)frame
