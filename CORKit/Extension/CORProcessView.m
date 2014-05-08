@@ -52,6 +52,9 @@ static NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
 
 #pragma mark - public
 
+/**
+ * register process with relative offset of a view
+ */
 - (void)registerProcessWithView:(UIView *)view
                          origin:(CGPoint)origin
 {
@@ -61,6 +64,9 @@ static NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
     [self addProccessView:view];
 }
 
+/**
+ * register process with offset from center of a view
+ */
 - (void)registerProcessWithView:(UIView *)view
                      centerView:(UIView *)centerView
                        offset:(CGPoint)offset
@@ -77,6 +83,9 @@ static NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
     [self addProccessView:view];
 }
 
+/**
+ * register process with margin offset from a view
+ */
 - (void)registerProcessWithView:(UIView *)view
                      besideView:(UIView *)besideView
                        position:(CORPosition)position
@@ -134,6 +143,10 @@ static NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
     
 }
 
+/**
+ * start processed automatically.
+ * (needs keyTimes property)
+ */
 - (void)start
 {
     if (_keyTimes == nil)
@@ -147,6 +160,9 @@ static NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
 
 }
 
+/**
+ * proceeds to the next
+ */
 - (void)process
 {
     // end
