@@ -7,6 +7,7 @@
 //
 
 #import "CORScrollMenuBar.h"
+#import "UIView+COR.h"
 
 @implementation CORScrollMenuBar
 {
