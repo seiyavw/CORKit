@@ -10,10 +10,9 @@
 
 @interface COROnWindowView : UIView
 
++ (COROnWindowView *)createInstance;
 - (void)setup;
 - (void)show;
 - (void)hide;
-+ (void)show;
-+ (void)hide;
 
 @end

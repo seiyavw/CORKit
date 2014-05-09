@@ -31,16 +31,6 @@
     // override
 }
 
-+ (void)show
-{
-    [[self createInstance] show];
-}
-
-+ (void)hide
-{
-    [[self createInstance] hide];
-}
-
 - (void)show
 {
     [[UIApplication sharedApplication].delegate.window addSubview:self];
