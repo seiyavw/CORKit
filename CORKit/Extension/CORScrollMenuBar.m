@@ -25,6 +25,15 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self setupScrollView];
+    }
+    return self;
+}
+
 #pragma mark - private
 
 - (void)setupScrollView

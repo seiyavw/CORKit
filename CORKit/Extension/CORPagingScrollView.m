@@ -29,6 +29,16 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setupScrollView];
+    }
+    return self;
+}
+
+
 #pragma mark - private
 
 /**
