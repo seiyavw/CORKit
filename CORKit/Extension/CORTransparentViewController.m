@@ -104,15 +104,7 @@
         
         [self.view.layer removeAnimationForKey:@"dismissAnimation"];
         
-        
-        if (self.navigationController) {
-            
-            [self containerRemoveNavigationFromParentViewController];
-            
-        } else {
-            
-            [self containerRemoveFromParentViewController];
-        }
+        [self containerRemoveFromParentViewController];
         
         if (_dismissCompletion) {
             
