@@ -10,6 +10,9 @@
 
 @implementation UINavigationController (COR)
 
+/**
+ * use custom animation for preventing VCs from be overlappded by each other
+ */
 - (void)pushTransparentViewController:(UIViewController *)viewController
 {
     CATransition *transition = [CATransition animation];

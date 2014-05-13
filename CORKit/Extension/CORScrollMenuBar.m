@@ -115,7 +115,7 @@
     // relayout based on new array
     CGFloat lastMaxX = 0;
     for (UIButton *button in newButtons) {
-        [button setFrame:CGRectMake(lastMaxX + _horizontalMargin, _vertialMargin, [button getWidth], [button getHeight])];
+        [button setFrame:CGRectMake(lastMaxX + _horizontalMargin, _vertialMargin, button.frame.size.width, button.frame.size.height)];
         lastMaxX = CGRectGetMaxX(button.frame);
     }
     
@@ -131,7 +131,7 @@
 - (void)scrollToCenterOfButton:(UIButton *)button animated:(BOOL)animated completion:(void (^)(BOOL finished))completion
 {
 
-    CGFloat targetX = [button getOriginX] - ([_scrollView getWidth] - [button getWidth]) / 2;
+    CGFloat targetX = button.frame.origin.x - (_scrollView.frame.size.width - button.frame.size.width) / 2;
     CGPoint targetPoint = CGPointMake(targetX, _scrollView.contentOffset.y);
     
     __weak typeof (_scrollView) weakScrollView = _scrollView;
@@ -223,13 +223,13 @@
     for (NSInteger i = 0, length = buttons.count; i < length; i++) {
         
         UIButton *button = [buttons objectAtIndex:i];
-        [button setFrame:CGRectMake(lastMaxX + _horizontalMargin, _vertialMargin, [button getWidth], [button getHeight])];
+        [button setFrame:CGRectMake(lastMaxX + _horizontalMargin, _vertialMargin, button.frame.size.width, button.frame.size.height)];
         [button addTarget:self action:@selector(didTapMenuButton:) forControlEvents:UIControlEventTouchUpInside];
         [_scrollView addSubview:button];
         lastMaxX = CGRectGetMaxX(button.frame);
     }
     
-    [_scrollView setContentSize:CGSizeMake(lastMaxX + _horizontalMargin, [self getHeight])];
+    [_scrollView setContentSize:CGSizeMake(lastMaxX + _horizontalMargin, self.frame.size.height)];
     
     _buttons = buttons;
 }

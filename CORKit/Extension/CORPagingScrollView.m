@@ -63,7 +63,7 @@
 - (void)rearrangePages
 {
     NSInteger visibleIndex = ceil((CGFloat)(_pages.count - 1) / 2);
-    CGFloat pageWidth = [self getWidth];
+    CGFloat pageWidth = self.frame.size.width;
     
     // example (case of the number of pages is four)
     //
@@ -132,14 +132,14 @@
     for (NSInteger i = 0, length = pages.count; i < length; i++) {
         
         UIView *view = [pages objectAtIndex:i];
-        CGFloat width = [view getWidth];
+        CGFloat width = view.frame.size.width;
         [view setOriginX: width * i];
         [_scrollView addSubview:view];
         
         contentWidth += width;
     }
     
-    [_scrollView setContentSize:CGSizeMake(contentWidth, [self getHeight])];
+    [_scrollView setContentSize:CGSizeMake(contentWidth, self.frame.size.height)];
     
     _pages = pages;
     

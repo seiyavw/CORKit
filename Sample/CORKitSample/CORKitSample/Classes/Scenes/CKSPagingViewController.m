@@ -83,7 +83,7 @@
 
 - (void)setupScrollView
 {
-    CORPagingScrollView *scrollView = [[CORPagingScrollView alloc] initWithFrame:CGRectMake(0.f, 64.f, 320.f, [self.view getHeight] - 64.f)];
+    CORPagingScrollView *scrollView = [[CORPagingScrollView alloc] initWithFrame:CGRectMake(0.f, 64.f, 320.f, self.view.frame.size.height - 64.f)];
     
     NSMutableArray *pages = @[].mutableCopy;
     for (int i = 0; i < 9; i++) {

@@ -10,6 +10,9 @@
 
 @implementation UIScrollView (COR)
 
+/**
+ * fetch user touch events even on scrollview
+ */
 - (void)touchesEnded:(NSSet *)touches
            withEvent:(UIEvent *)event
 {
@@ -22,6 +25,5 @@
 	[super touchesEnded:touches
               withEvent:event];
 }
-
 
 @end

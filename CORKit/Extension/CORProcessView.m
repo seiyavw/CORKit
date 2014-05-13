@@ -58,7 +58,7 @@ static NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
 - (void)registerProcessWithView:(UIView *)view
                          origin:(CGPoint)origin
 {
-    CGRect frame = CGRectMake(origin.x, origin.y, [view getWidth], [view getHeight]);
+    CGRect frame = CGRectMake(origin.x, origin.y, view.frame.size.width, view.frame.size.height);
     view.frame = frame;
     
     [self addProccessView:view];
@@ -106,7 +106,7 @@ static NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
             
             if (hasLeft) {
                 
-                offsetX = [besideView getOriginX] - [view getWidth] - position.left;
+                offsetX = besideView.frame.origin.x - view.frame.size.width - position.left;
             
             } else {
             
@@ -114,7 +114,7 @@ static NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
             }
             
             if (!hasBottom && !hasTop) {
-                offsetY = [besideView getOriginY] + ([besideView getHeight] - [view getHeight]) / 2;
+                offsetY = besideView.frame.origin.y + (besideView.frame.size.height - view.frame.size.height) / 2;
             }
         }
         
@@ -122,7 +122,7 @@ static NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
             
             if (hasTop) {
                 
-                offsetY = [besideView getOriginY] - [view getHeight] - position.top;
+                offsetY = besideView.frame.origin.y - view.frame.size.height - position.top;
                 
             } else {
                 
@@ -131,11 +131,11 @@ static NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
             
             if (!hasLeft && !hasRight) {
             
-                offsetX = [besideView getOriginX] + ([besideView getWidth] - [view getWidth]) / 2;
+                offsetX = besideView.frame.origin.x + (besideView.frame.size.width - view.frame.size.width) / 2;
             }
         }
         
-        CGRect frame = CGRectMake(offsetX, offsetY, [view getWidth], [view getHeight]);
+        CGRect frame = CGRectMake(offsetX, offsetY, view.frame.size.width, view.frame.size.height);
         view.frame = frame;
     }
     
