@@ -20,9 +20,12 @@
 
 #import "NSString+COR.h"
 #import "NSDate+COR.h"
+#import "NSDictionary+COR.h"
+
 #import "UIDevice+COR.h"
 #import "UIImage+COR.h"
 #import "UINavigationController+COR.h"
+#import "UIScrollView+COR.h"
 #import "UIStoryboard+COR.h"
 #import "UIView+COR.h"
 #import "UIViewController+COR.h"
