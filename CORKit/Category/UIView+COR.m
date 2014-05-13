@@ -10,58 +10,93 @@
 
 @implementation UIView (COR)
 
-- (CGFloat)getOriginX
+- (CGFloat)originX
 {
     return self.frame.origin.x;
 }
 
-- (CGFloat)getOriginY
+- (CGFloat)originY
 {
     return self.frame.origin.y;
 }
 
-- (CGFloat)getWidth
+- (CGFloat)width
 {
     return self.frame.size.width;
 }
 
-- (CGFloat)getHeight
+- (CGFloat)height
 {
     return self.frame.size.height;
 }
 
-- (CGFloat)getBottom
+- (CGFloat)maxX
 {
-    return self.frame.origin.y + self.frame.size.height;
+    return CGRectGetMaxX(self.frame);
+}
+
+- (CGFloat)maxY
+{
+    return CGRectGetMaxX(self.frame);
+}
+
+- (CGPoint)origin
+{
+    return self.frame.origin;
+}
+
+- (CGSize)size
+{
+    return self.frame.size;
 }
 
 - (void)setOriginX:(CGFloat)originX
 {
-    [self setFrame:CGRectMake(originX, self.getOriginY, self.getWidth, self.getHeight)];
+    [self setFrame:CGRectMake(originX, self.originY, self.width, self.height)];
 }
 
 - (void)setOriginY:(CGFloat)originY
 {
-    [self setFrame:CGRectMake(self.getOriginX, originY, self.getWidth, self.getHeight)];
+    [self setFrame:CGRectMake([self originX], originY, self.width, self.height)];
 }
 
 - (void)setWidth:(CGFloat)width
 {
-    [self setFrame:CGRectMake(self.getOriginX, self.getOriginY, width, self.getHeight)];
+    [self setFrame:CGRectMake([self originX], [self originY], width, self.height)];
 }
 
 - (void)setHeight:(CGFloat)height
 {
-    [self setFrame:CGRectMake(self.getOriginX, self.getOriginY, self.getWidth, height)];
+    [self setFrame:CGRectMake([self originX], [self originY], self.width, height)];
+}
+
+- (void)setMaxX:(CGFloat)maxX
+{
+    [self setFrame: CGRectMake(maxX - self.width, self.originY, self.width, self.height)];
+}
+
+- (void)setMaxY:(CGFloat)maxY
+{
+    [self setFrame: CGRectMake(self.originX, maxY - self.height, self.width, self.height)];
+}
+
+- (void)setOrigin:(CGPoint)origin
+{
+    [self setFrame:CGRectMake(origin.x, origin.y, self.width, self.height)];
+}
+
+- (void)setSize:(CGSize)size
+{
+    [self setFrame:CGRectMake(self.originX, self.originY, size.width, size.height)];
 }
 
 - (void)checkFrame
 {
-    NSLog(@"--- Instance of %@ ---", NSStringFromClass([self class]));
-    NSLog(@" OriginX : %f", [self getOriginX]);
-    NSLog(@" OriginY : %f", [self getOriginY]);
-    NSLog(@" Width   : %f", [self getWidth]);
-    NSLog(@" Height  : %f", [self getHeight]);
+    NSLog(@"-- Instance of %@ --", NSStringFromClass([self class]));
+    NSLog(@" OriginX : %f", [self originX]);
+    NSLog(@" OriginY : %f", [self originY]);
+    NSLog(@" Width   : %f", self.width);
+    NSLog(@" Height  : %f", self.height);
 }
 
 

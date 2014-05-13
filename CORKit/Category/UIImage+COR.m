@@ -13,6 +13,44 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 
 @implementation UIImage (COR)
 
++ (UIImage *)roundedImageWithImage:(UIImage *)image size:(CGSize)size
+{
+    CGContextRef cx = CGBitmapContextCreate(NULL, size.width, size.height, CGImageGetBitsPerComponent(image.CGImage), 0, CGImageGetColorSpace(image.CGImage), (int)kCGImageAlphaPremultipliedLast);
+    
+    CGContextBeginPath(cx);
+    CGRect pathRect = CGRectMake(0, 0, size.width, size.height);
+    CGContextAddEllipseInRect(cx, pathRect);
+    CGContextClosePath(cx);
+    CGContextClip(cx);
+    
+    CGContextDrawImage(cx, CGRectMake(0, 0, size.width, size.height), image.CGImage);
+    
+    CGImageRef clippedImage = CGBitmapContextCreateImage(cx);
+    CGContextRelease(cx);
+    
+    UIImage *roundedImage = [UIImage imageWithCGImage:clippedImage];
+    CGImageRelease(clippedImage);
+    return roundedImage;
+}
+
++ (UIImage *)syntheSizeImageWithBaseImage:(UIImage *)baseImage frontImage:(UIImage *)frontImage atPoint:(CGPoint)point
+{
+    CGSize size = CGSizeMake(baseImage.size.width, baseImage.size.height);
+    
+    UIGraphicsBeginImageContext(size);
+    
+    [baseImage drawInRect:CGRectMake(0, 0 ,size.width, size.height)];
+    // draw thumbnail at x:10 y:10
+    [frontImage drawInRect:CGRectMake(point.x, point.y, frontImage.size.width, frontImage.size.height)];
+    
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return result;
+}
+
+
 - (UIImage *)imageOrientationFixedOfCamera:(BOOL)takenByFront
 {
     UIImage *fixedImage = nil;

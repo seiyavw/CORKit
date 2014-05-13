@@ -10,17 +10,16 @@
 
 @interface UIView (COR)
 
-- (CGFloat)getOriginX;
-- (CGFloat)getOriginY;
-- (CGFloat)getWidth;
-- (CGFloat)getHeight;
-- (CGFloat)getBottom;
+@property (nonatomic) CGFloat originX;
+@property (nonatomic) CGFloat originY;
+@property (nonatomic) CGFloat width;
+@property (nonatomic) CGFloat height;
+@property (nonatomic) CGFloat maxX;
+@property (nonatomic) CGFloat maxY;
 
-- (void)setOriginX:(CGFloat)originX;
-- (void)setOriginY:(CGFloat)originY;
-- (void)setWidth:(CGFloat)width;
-- (void)setHeight:(CGFloat)height;
+@property (nonatomic) CGPoint origin;
+@property (nonatomic) CGSize size;
+
 - (void)checkFrame;
-
 
 @end
