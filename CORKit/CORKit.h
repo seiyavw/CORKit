@@ -1,6 +1,6 @@
 //
-//  COR.h
-//  COR
+//  CORKit.h
+//  CORKit
 //
 //  Created by Seiya Sasaki on 2014/03/24.
 //  Copyright (c) 2014年 cor. All rights reserved.
