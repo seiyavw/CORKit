@@ -13,6 +13,6 @@
 - (void)pushTransparentViewController:(UIViewController *)viewController;
 - (void)popTransparentViewController;
 - (void)pushFadeViewController:(UIViewController *)viewController;
-- (void)popFadeTransparentViewController;
+- (void)popFadeViewController;
 
 @end
