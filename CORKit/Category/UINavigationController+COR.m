@@ -40,7 +40,7 @@
 - (void)pushFadeViewController:(UIViewController *)viewController
 {
     CATransition* transition = [CATransition animation];
-    transition.duration = 0.5;
+    transition.duration = 0.3;
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     transition.type = kCATransitionFade;
     [self.view.layer addAnimation:transition forKey:nil];
@@ -51,7 +51,7 @@
 - (void)popFadeViewController
 {
     CATransition* transition = [CATransition animation];
-    transition.duration = 0.5;
+    transition.duration = 0.3;
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     transition.type = kCATransitionFade;
     
