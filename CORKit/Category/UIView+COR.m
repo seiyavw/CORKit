@@ -37,7 +37,7 @@
 
 - (CGFloat)maxY
 {
-    return CGRectGetMaxX(self.frame);
+    return CGRectGetMaxY(self.frame);
 }
 
 - (CGPoint)origin
