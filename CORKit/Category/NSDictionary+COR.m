@@ -12,7 +12,7 @@
 
 - (id)valueForObjectWithKey:(NSString *)key
 {
-    return [self valueForObjectWithKey:nil];
+    return [self valueForObjectWithKey:key defaultValue:nil];
 }
 
 - (id)valueForObjectWithKey:(NSString *)key defaultValue:(id)defaultValue

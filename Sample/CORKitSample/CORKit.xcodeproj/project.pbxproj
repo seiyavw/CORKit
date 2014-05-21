@@ -12,6 +12,7 @@
 		9F516ACB1921BFDF00550E7B /* UIScrollView+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F516ACA1921BFDF00550E7B /* UIScrollView+COR.m */; };
 		9F97322B18EEBAB400B13F59 /* NSDate+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F97322A18EEBAB400B13F59 /* NSDate+COR.m */; };
 		9F9B1D761911D2F80047341B /* CORPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B1D751911D2F80047341B /* CORPagingScrollView.m */; };
+		9F9D3990192C4E73007F716B /* NSURL+COR.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D398F192C4E73007F716B /* NSURL+COR.m */; };
 		9FA9FE9B1918B8C8002D085C /* CORScrollContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9FE9A1918B8C8002D085C /* CORScrollContentViewController.m */; };
 		9FA9FEA11918CBC4002D085C /* CORAutoLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9FEA01918CBC4002D085C /* CORAutoLoadViewController.m */; };
 		9FAE730518EE4C35004CDCA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730418EE4C35004CDCA8 /* Foundation.framework */; };
@@ -69,6 +70,8 @@
 		9F97322A18EEBAB400B13F59 /* NSDate+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+COR.m"; sourceTree = "<group>"; };
 		9F9B1D741911D2F80047341B /* CORPagingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORPagingScrollView.h; sourceTree = "<group>"; };
 		9F9B1D751911D2F80047341B /* CORPagingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORPagingScrollView.m; sourceTree = "<group>"; };
+		9F9D398E192C4E73007F716B /* NSURL+COR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+COR.h"; sourceTree = "<group>"; };
+		9F9D398F192C4E73007F716B /* NSURL+COR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+COR.m"; sourceTree = "<group>"; };
 		9FA9FE991918B8C8002D085C /* CORScrollContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORScrollContentViewController.h; sourceTree = "<group>"; };
 		9FA9FE9A1918B8C8002D085C /* CORScrollContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORScrollContentViewController.m; sourceTree = "<group>"; };
 		9FA9FE9F1918CBC4002D085C /* CORAutoLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORAutoLoadViewController.h; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 				9FAE734118EE4C5E004CDCA8 /* UIView+COR.m */,
 				9FAE734218EE4C5E004CDCA8 /* UIViewController+COR.h */,
 				9FAE734318EE4C5E004CDCA8 /* UIViewController+COR.m */,
+				9F9D398E192C4E73007F716B /* NSURL+COR.h */,
+				9F9D398F192C4E73007F716B /* NSURL+COR.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				9FAE735A18EE4C5E004CDCA8 /* UINavigationController+COR.m in Sources */,
 				9FAE731518EE4C35004CDCA8 /* CKSAppDelegate.m in Sources */,
 				9F97322B18EEBAB400B13F59 /* NSDate+COR.m in Sources */,
+				9F9D3990192C4E73007F716B /* NSURL+COR.m in Sources */,
 				9FAE735D18EE4C5E004CDCA8 /* UIViewController+COR.m in Sources */,
 				9FAE735F18EE4C5E004CDCA8 /* CORTransparentViewController.m in Sources */,
 				9FAE735718EE4C5E004CDCA8 /* NSString+COR.m in Sources */,
