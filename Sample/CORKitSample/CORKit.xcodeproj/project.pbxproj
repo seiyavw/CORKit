@@ -119,6 +119,8 @@
 		9FAE735118EE4C5E004CDCA8 /* COROnWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COROnWindowView.h; sourceTree = "<group>"; };
 		9FAE735218EE4C5E004CDCA8 /* COROnWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COROnWindowView.m; sourceTree = "<group>"; };
 		9FAE735618EE4C5E004CDCA8 /* CORMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORMacros.h; sourceTree = "<group>"; };
+		9FB798D5192ED2A000A64C16 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9FB798D7192ED2A800A64C16 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		9FD8DAD41915F0FA00FABB64 /* CORProcessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORProcessView.h; sourceTree = "<group>"; };
 		9FD8DAD51915F0FA00FABB64 /* CORProcessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORProcessView.m; sourceTree = "<group>"; };
 		9FD8DADC1915F8E800FABB64 /* CKSPagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSPagingViewController.h; sourceTree = "<group>"; };
@@ -177,6 +179,8 @@
 		9FAE730318EE4C35004CDCA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FB798D7192ED2A800A64C16 /* Accounts.framework */,
+				9FB798D5192ED2A000A64C16 /* Social.framework */,
 				9FAE730418EE4C35004CDCA8 /* Foundation.framework */,
 				9FAE730618EE4C35004CDCA8 /* CoreGraphics.framework */,
 				9FAE730818EE4C35004CDCA8 /* UIKit.framework */,

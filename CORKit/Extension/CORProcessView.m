@@ -20,7 +20,7 @@ CORPosition CORPositionMake(CGFloat top, CGFloat right, CGFloat bottom, CGFloat 
     NSInteger _currentIndex;
 }
 
-static NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
+NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
 
 - (id)initWithFrame:(CGRect)frame
 {
