@@ -9,15 +9,15 @@
 #import "CORAudioSlider.h"
 #import <AVFoundation/AVFoundation.h>
 
+NSString *const kCORAudioPlayerStatus;
+NSString *const kCORAudioPlayerLoadedTimeRange;
+
 @implementation CORAudioSlider
 {
     AVPlayer *_player;
     id _sliderObserver;
 
 }
-
-NSString *const kCORAudioPlayerStatus;
-NSString *const kCORAudioPlayerLoadedTimeRange;
 
 - (id)initWithFrame:(CGRect)frame
 {
