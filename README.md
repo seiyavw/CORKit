@@ -2,7 +2,7 @@
 
 iOS Framework for personal use (in alpha).
 
-CORKit is currently under developmemnt.  Therefore, it will be frequently modified and updated for the time being.
+CORKit is currently under developmemnt.  It will be frequently modified and updated for the time being.
 
 
 ### Extensions
