@@ -1,11 +1,8 @@
 #CORKit
 
-iOS Framework for personal use.
-This framework is currently in alpha.
+iOS Framework for personal use (in alpha).
 
-Caution:
-CORKit is currently under developmemnt.
-Therefore, it will be frequently modified and updated for the time being.
+CORKit is currently under developmemnt.  Therefore, it will be frequently modified and updated for the time being.
 
 
 ### Extensions
