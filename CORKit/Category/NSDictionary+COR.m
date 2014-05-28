@@ -10,12 +10,12 @@
 
 @implementation NSDictionary (COR)
 
-- (id)valueForObjectWithKey:(NSString *)key
+- (id)valueReplacingNullWithKey:(NSString *)key
 {
-    return [self valueForObjectWithKey:key defaultValue:nil];
+    return [self valueReplacingNullWithKey:key defaultValue:nil];
 }
 
-- (id)valueForObjectWithKey:(NSString *)key defaultValue:(id)defaultValue
+- (id)valueReplacingNullWithKey:(NSString *)key defaultValue:(id)defaultValue
 {
     id value = self[key];
     if ([value isKindOfClass:[NSNull class]]) {

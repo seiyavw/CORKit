@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (COR)
+
 + (UIImage *)roundedImageWithImage:(UIImage *)image size:(CGSize)size;
 + (UIImage *)syntheSizeImageWithBaseImage:(UIImage *)baseImage frontImage:(UIImage *)frontImage atPoint:(CGPoint)point;
 

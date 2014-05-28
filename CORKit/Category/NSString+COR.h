@@ -10,7 +10,7 @@
 
 @interface NSString (COR)
 
-- (CGRect)getTextFrameWithFont:(UIFont *)font label:(UILabel *)label padding:(CGFloat)padding;
-- (CGSize)getTextSizeWithFont:(UIFont *)font viewWidth:(CGFloat)viewWidth padding:(CGFloat)padding;
+- (CGRect)getTextFrameWithFont:(UIFont *)font label:(UILabel *)label padding:(CGSize)padding;
+- (CGSize)getTextSizeWithFont:(UIFont *)font viewWidth:(CGFloat)viewWidth padding:(CGSize)padding;
 
 @end

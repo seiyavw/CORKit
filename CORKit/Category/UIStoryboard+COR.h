@@ -10,7 +10,7 @@
 
 @interface UIStoryboard (COR)
 
-+ (UIViewController *)initialViewController:(NSString *)storyboardName;
++ (UIViewController *)initialViewControllerWithStoryboardName:(NSString *)storyboardName;
 + (UIViewController *)viewController:(NSString *)viewControllerID storyboardName:(NSString *)storyboardName;
 
 @end

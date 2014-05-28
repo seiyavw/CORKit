@@ -25,4 +25,41 @@
     return date;
 }
 
+/**
+ * helper: compare two date instances by year, month and day.
+ */
++ (BOOL)isSameDayWithDate1:(NSDate*)date1 date2:(NSDate*)date2
+{
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    
+    NSDateComponents* comp1 = [calendar components:unitFlags fromDate:date1];
+    [comp1 setTimeZone:[NSTimeZone localTimeZone]];
+    NSDateComponents* comp2 = [calendar components:unitFlags fromDate:date2];
+    [comp2 setTimeZone:[NSTimeZone localTimeZone]];
+    
+    return [comp1 day] == [comp2 day] &&
+    [comp1 month] == [comp2 month] &&
+    [comp1 year]  == [comp2 year];
+}
+
+/**
+ * modify a date instance with proper local timezone
+ */
++ (NSDate *)adjustDate:(NSDate *)date sourceTimeZone:(NSTimeZone *)sourceTimeZone destinationTimeZone:(NSTimeZone *)destinationTimeZone
+{
+    
+    NSInteger sourceGMTOffset = [sourceTimeZone secondsFromGMTForDate:date];
+    NSInteger destinationGMTOffset = [destinationTimeZone secondsFromGMTForDate:date];
+    NSTimeInterval interval = destinationGMTOffset - sourceGMTOffset;
+    
+    NSDate *localDate = [[NSDate alloc] initWithTimeInterval:interval sinceDate:date];
+    
+    return localDate;
+}
+
+
+
 @end

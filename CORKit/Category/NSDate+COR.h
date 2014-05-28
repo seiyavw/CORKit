@@ -11,5 +11,7 @@
 @interface NSDate (COR)
 
 + (NSDate *)createDateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minite:(NSInteger)minute second:(NSInteger)second;
++ (NSDate *)adjustDate:(NSDate *)date sourceTimeZone:(NSTimeZone *)sourceTimeZone destinationTimeZone:(NSTimeZone *)destinationTimeZone;
++ (BOOL)isSameDayWithDate1:(NSDate*)date1 date2:(NSDate*)date2;
 
 @end

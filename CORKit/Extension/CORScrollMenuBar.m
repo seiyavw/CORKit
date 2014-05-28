@@ -72,7 +72,6 @@
  */
 - (void)rearrangeButtonsWithCenterIndex:(NSInteger)centerIndex
 {
-
     NSInteger visibleIndex = ceil((CGFloat)(_buttons.count - 1) / 2);
     
     // example (case of the number of pages is four)

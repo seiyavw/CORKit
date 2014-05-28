@@ -10,7 +10,8 @@
 
 @implementation NSString (COR)
 
-- (CGRect)getTextFrameWithFont:(UIFont *)font label:(UILabel *)label padding:(CGFloat)padding {
+- (CGRect)getTextFrameWithFont:(UIFont *)font label:(UILabel *)label padding:(CGSize)padding
+{
     
     CGSize size;
     if ([self respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) {
@@ -29,12 +30,12 @@
         
     }
     
-    CGRect frame = CGRectMake(label.frame.origin.x, label.frame.origin.y, label.frame.size.width, size.height + padding);
+    CGRect frame = CGRectMake(label.frame.origin.x, label.frame.origin.y, label.frame.size.width + padding.width, size.height + padding.height);
     
     return frame;
 }
 
-- (CGSize)getTextSizeWithFont:(UIFont *)font viewWidth:(CGFloat)viewWidth padding:(CGFloat)padding
+- (CGSize)getTextSizeWithFont:(UIFont *)font viewWidth:(CGFloat)viewWidth padding:(CGSize)padding
 {
     
     CGSize size;
@@ -53,7 +54,8 @@
         #pragma clang diagnostic pop
     }
     
-    size.height += padding;
+    size.width += padding.width;
+    size.height += padding.height;
     
     return size;
 }

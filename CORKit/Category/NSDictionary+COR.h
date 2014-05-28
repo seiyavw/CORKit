@@ -10,7 +10,7 @@
 
 @interface NSDictionary (COR)
 
-- (id)valueForObjectWithKey:(NSString *)key;
-- (id)valueForObjectWithKey:(NSString *)key defaultValue:(id)defaultValue;
+- (id)valueReplacingNullWithKey:(NSString *)key;
+- (id)valueReplacingNullWithKey:(NSString *)key defaultValue:(id)defaultValue;
 
 @end

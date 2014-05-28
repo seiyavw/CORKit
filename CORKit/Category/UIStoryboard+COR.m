@@ -10,7 +10,7 @@
 
 @implementation UIStoryboard (COR)
 
-+ (UIViewController *)initialViewController:(NSString *)storyboardName
++ (UIViewController *)initialViewControllerWithStoryboardName:(NSString *)storyboardName
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
     UIViewController *initialViewController = [storyboard instantiateInitialViewController];
