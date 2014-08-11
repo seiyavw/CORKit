@@ -1,5 +1,5 @@
 //
-//  UIDevice+COR.h
+//  UIDevice+Util.h
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/01/28.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIDevice (COR)
+@interface UIDevice (Util)
 
 + (BOOL)is4inch;
 + (BOOL)isIOS7Later;

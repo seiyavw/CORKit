@@ -1,5 +1,5 @@
 //
-//  UIViewController+COR.h
+//  UIViewController+Container.h
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/01/28.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (COR)
+@interface UIViewController (Container)
 
 - (void)containerAddChildViewController:(UIViewController *)childViewController parentView:(UIView *)view;
 - (void)containerAddChildViewController:(UIViewController *)childViewController;

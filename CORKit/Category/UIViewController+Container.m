@@ -1,14 +1,14 @@
 //
-//  UIViewController+COR.m
+//  UIViewController+Container.m
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/01/28.
 //  Copyright (c) 2014年 Seiya Sasaki. All rights reserved.
 //
 
-#import "UIViewController+COR.h"
+#import "UIViewController+Container.h"
 
-@implementation UIViewController (COR)
+@implementation UIViewController (Container)
 
 - (void)containerAddChildViewController:(UIViewController *)childViewController parentView:(UIView *)view
 {

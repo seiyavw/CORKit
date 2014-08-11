@@ -7,7 +7,7 @@
 //
 
 #import "CORTransparentViewController.h"
-#import "UIViewController+COR.h"
+#import "UIViewController+Container.h"
 
 @interface CORTransparentViewController ()
 

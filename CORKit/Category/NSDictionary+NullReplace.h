@@ -1,5 +1,5 @@
 //
-//  NSDictionary+COR.h
+//  NSDictionary+NullReplace.h
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/05/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (COR)
+@interface NSDictionary (NullReplace)
 
 - (id)valueReplacingNullWithKey:(NSString *)key;
 - (id)valueReplacingNullWithKey:(NSString *)key defaultValue:(id)defaultValue;

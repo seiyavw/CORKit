@@ -1,14 +1,14 @@
 //
-//  UIDevice+COR.m
+//  UIDevice+Util.m
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/01/28.
 //  Copyright (c) 2014年 Seiya Sasaki. All rights reserved.
 //
 
-#import "UIDevice+COR.h"
+#import "UIDevice+Util.h"
 
-@implementation UIDevice (COR)
+@implementation UIDevice (Util)
 
 + (BOOL)is4inch
 {

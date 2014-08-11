@@ -1,14 +1,14 @@
 //
-//  UIScrollView+COR.m
+//  UIScrollView+Touch.m
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/05/13.
 //  Copyright (c) 2014年 corleonis.jp. All rights reserved.
 //
 
-#import "UIScrollView+COR.h"
+#import "UIScrollView+Touch.h"
 
-@implementation UIScrollView (COR)
+@implementation UIScrollView (Touch)
 
 /**
  * fetch user touch events even on scrollview

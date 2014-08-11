@@ -1,14 +1,14 @@
 //
-//  UIStoryboard+COR.m
+//  UIStoryboard+Access.m
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/01/28.
 //  Copyright (c) 2014年 Seiya Sasaki. All rights reserved.
 //
 
-#import "UIStoryboard+COR.h"
+#import "UIStoryboard+Access.h"
 
-@implementation UIStoryboard (COR)
+@implementation UIStoryboard (Access)
 
 + (UIViewController *)initialViewControllerWithStoryboardName:(NSString *)storyboardName
 {

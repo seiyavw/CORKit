@@ -1,14 +1,14 @@
 //
-//  NSString+COR.m
+//  NSString+Size.m
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/02/20.
 //  Copyright (c) 2014年 Seiya Sasaki. All rights reserved.
 //
 
-#import "NSString+COR.h"
+#import "NSString+Size.h"
 
-@implementation NSString (COR)
+@implementation NSString (Size)
 
 - (CGRect)getTextFrameWithFont:(UIFont *)font label:(UILabel *)label padding:(CGSize)padding
 {

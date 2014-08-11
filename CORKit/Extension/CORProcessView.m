@@ -7,7 +7,7 @@
 //
 
 #import "CORProcessView.h"
-#import "UIView+COR.h"
+#import "UIView+Extend.h"
 
 CORPosition CORPositionMake(CGFloat top, CGFloat right, CGFloat bottom, CGFloat left)
 {

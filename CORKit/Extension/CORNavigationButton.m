@@ -7,7 +7,6 @@
 //
 
 #import "CORNavigationButton.h"
-#import "UIDevice+COR.h"
 
 @implementation CORNavigationButton
 {
@@ -32,7 +31,8 @@ CGFloat const kNavigationMarginSize = 9.0f;
 
 - (UIEdgeInsets)alignmentRectInsets
 {
-    if ([UIDevice isIOS7Later]) {
+    BOOL isIOS7Later = ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0);
+    if (isIOS7Later) {
         
         UIEdgeInsets insets;
         if (_isLeftItem) {

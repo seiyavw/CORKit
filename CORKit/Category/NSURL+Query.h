@@ -1,5 +1,5 @@
 //
-//  NSURL+COR.h
+//  NSURL+Query.h
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/05/21.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSURL (COR)
+@interface NSURL (Query)
 
 -(NSDictionary *) dictionaryFromQuery;
 

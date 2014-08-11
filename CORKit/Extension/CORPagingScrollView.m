@@ -11,7 +11,7 @@
 // - refactoring
 
 #import "CORPagingScrollView.h"
-#import "UIView+COR.h"
+#import "UIView+Extend.h"
 
 @implementation CORPagingScrollView
 {

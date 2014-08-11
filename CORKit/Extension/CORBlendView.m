@@ -23,18 +23,14 @@
 
 - (UIImage *)imageFromView:(UIView *)view
 {
-    // 必要なUIImageサイズ分のコンテキスト確保
     UIGraphicsBeginImageContextWithOptions(self.frame.size, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextClearRect(context, self.bounds);
     
-    // 画像出力
     [view.layer renderInContext:context];
     
-    // uiimage化
     UIImage *renderedImage = UIGraphicsGetImageFromCurrentImageContext();
     
-    // コンテキスト破棄
     UIGraphicsEndImageContext();
     
     return renderedImage;

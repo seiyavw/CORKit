@@ -1,14 +1,14 @@
 //
-//  UIView+COR.m
+//  UIView+Extend.m
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/01/28.
 //  Copyright (c) 2014年 Seiya Sasaki. All rights reserved.
 //
 
-#import "UIView+COR.h"
+#import "UIView+Extend.h"
 
-@implementation UIView (COR)
+@implementation UIView (Extend)
 
 - (CGFloat)originX
 {

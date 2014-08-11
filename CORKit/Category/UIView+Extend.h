@@ -1,5 +1,5 @@
 //
-//  UIView+COR.h
+//  UIView+Extend.h
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/01/28.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (COR)
+@interface UIView (Extend)
 
 @property (nonatomic) CGFloat originX;
 @property (nonatomic) CGFloat originY;

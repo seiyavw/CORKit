@@ -1,5 +1,5 @@
 //
-//  UIScrollView+COR.h
+//  UIScrollView+Touch.h
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/05/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIScrollView (COR)
+@interface UIScrollView (Touch)
 
 @end

@@ -1,5 +1,5 @@
 //
-//  NSDate+COR.h
+//  NSDate+Util.h
 //  CORKitSample
 //
 //  Created by Seiya Sasaki on 2014/04/04.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDate (COR)
+@interface NSDate (Util)
 
 + (NSDate *)createDateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minite:(NSInteger)minute second:(NSInteger)second;
 + (NSDate *)adjustDate:(NSDate *)date sourceTimeZone:(NSTimeZone *)sourceTimeZone destinationTimeZone:(NSTimeZone *)destinationTimeZone;

@@ -8,6 +8,7 @@
 
 #import "CKSAppDelegate.h"
 #import "CKSTutorialViewController.h"
+#import "CKSPagingViewController.h"
 
 @implementation CKSAppDelegate
 
@@ -16,7 +17,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [CKSTutorialViewController new];
+//    self.window.rootViewController = [CKSTutorialViewController new];
+    self.window.rootViewController = [CKSPagingViewController new];
     [self.window makeKeyAndVisible];
     return YES;
 }

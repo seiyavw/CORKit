@@ -1,19 +1,19 @@
 //
-//  UINavigationController+COR.m
+//  UINavigationController+Transition.m
 //  CORKit 
 //
 //  Created by Seiya Sasaki on 2014/02/24.
 //  Copyright (c) 2014年 Seiya Sasaki All rights reserved.
 //
 
-#import "UINavigationController+COR.h"
+#import "UINavigationController+Transition.h"
 
-@implementation UINavigationController (COR)
+@implementation UINavigationController (Transition)
 
 /**
  * use custom animation for preventing VCs from be overlappded by each other
  */
-- (void)pushTransparentViewController:(UIViewController *)viewController
+- (void)pushNonOverWrappedViewController:(UIViewController *)viewController
 {
     CATransition *transition = [CATransition animation];
     transition.duration = 0.25;
@@ -25,7 +25,7 @@
     [self pushViewController:viewController animated:NO];
 }
 
-- (void)popTransparentViewController
+- (void)popNonOverWrappedViewController
 {
     CATransition *transition = [CATransition animation];
     transition.duration = 0.25;

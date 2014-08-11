@@ -1,5 +1,5 @@
 //
-//  UINavigationController+COR.h
+//  UINavigationController+Transition.h
 //  CORKit
 //
 //  Created by Seiya Sasaki on 2014/03/03.
@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UINavigationController (COR)
+@interface UINavigationController (Transition)
 
-- (void)pushTransparentViewController:(UIViewController *)viewController;
-- (void)popTransparentViewController;
+- (void)pushNonOverWrappedViewController:(UIViewController *)viewController;
+- (void)popNonOverWrappedViewController;
 - (void)pushFadeViewController:(UIViewController *)viewController;
 - (void)popFadeViewController;
 
