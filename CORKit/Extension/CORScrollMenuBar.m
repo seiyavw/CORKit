@@ -10,11 +10,6 @@
 #import "UIView+Extend.h"
 
 @implementation CORScrollMenuBar
-{
-    UIScrollView *_scrollView;
-    NSInteger _currentIndex;
-    NSArray *_buttons;
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -38,13 +33,14 @@
 
 - (void)setupScrollView
 {
-    _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
-    _scrollView.clipsToBounds = NO;
-    _scrollView.showsHorizontalScrollIndicator = NO;
-    _scrollView.showsVerticalScrollIndicator = NO;
-    _scrollView.delegate = self;
-    _scrollView.decelerationRate = UIScrollViewDecelerationRateFast;
-    [self addSubview:_scrollView];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+    scrollView.clipsToBounds = NO;
+    scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.delegate = self;
+    scrollView.decelerationRate = UIScrollViewDecelerationRateFast;
+    [self addSubview:scrollView];
+    _scrollView = scrollView;
 }
 
 - (void)didTapMenuButton:(id)sender
@@ -136,7 +132,7 @@
     __weak typeof (_scrollView) weakScrollView = _scrollView;
     
     if (animated) {
-        [UIView animateWithDuration:0.15f animations:^{
+        [UIView animateWithDuration:0.25f animations:^{
             
             [weakScrollView setContentOffset:targetPoint animated:NO];
             
@@ -257,6 +253,23 @@
     }];
 
 }
+
+/**
+ * set a button selected at a specified index
+ *
+ * @param button index number
+ *
+ * @return void
+ */
+- (void)setButtonSelectedAtIndex:(NSInteger)index
+{
+    for (NSInteger i = 0, length = _buttons.count; i < length; i++) {
+        
+        UIButton *button = [_buttons objectAtIndex:i];
+        button.selected = (i == index) ? YES : NO;
+    }
+}
+
 
 #pragma mark - UIScrollViewDelegate
 

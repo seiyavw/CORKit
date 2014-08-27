@@ -13,6 +13,7 @@
 		9F97322B18EEBAB400B13F59 /* NSDate+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F97322A18EEBAB400B13F59 /* NSDate+Util.m */; };
 		9F9B1D761911D2F80047341B /* CORPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B1D751911D2F80047341B /* CORPagingScrollView.m */; };
 		9F9D3990192C4E73007F716B /* NSURL+Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D398F192C4E73007F716B /* NSURL+Query.m */; };
+		9F9E3F8319AC213F0050EEE6 /* CORRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E3F8219AC213F0050EEE6 /* CORRefreshControl.m */; };
 		9FA9FE9B1918B8C8002D085C /* CORScrollContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9FE9A1918B8C8002D085C /* CORScrollContentViewController.m */; };
 		9FA9FEA11918CBC4002D085C /* CORAutoLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9FEA01918CBC4002D085C /* CORAutoLoadViewController.m */; };
 		9FAE730518EE4C35004CDCA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAE730418EE4C35004CDCA8 /* Foundation.framework */; };
@@ -72,6 +73,8 @@
 		9F9B1D751911D2F80047341B /* CORPagingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORPagingScrollView.m; sourceTree = "<group>"; };
 		9F9D398E192C4E73007F716B /* NSURL+Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Query.h"; sourceTree = "<group>"; };
 		9F9D398F192C4E73007F716B /* NSURL+Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Query.m"; sourceTree = "<group>"; };
+		9F9E3F8119AC213F0050EEE6 /* CORRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORRefreshControl.h; sourceTree = "<group>"; };
+		9F9E3F8219AC213F0050EEE6 /* CORRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORRefreshControl.m; sourceTree = "<group>"; };
 		9FA9FE991918B8C8002D085C /* CORScrollContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORScrollContentViewController.h; sourceTree = "<group>"; };
 		9FA9FE9A1918B8C8002D085C /* CORScrollContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CORScrollContentViewController.m; sourceTree = "<group>"; };
 		9FA9FE9F1918CBC4002D085C /* CORAutoLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CORAutoLoadViewController.h; sourceTree = "<group>"; };
@@ -299,6 +302,8 @@
 				9FAE734E18EE4C5E004CDCA8 /* CORNavigationButton.m */,
 				9FAE735118EE4C5E004CDCA8 /* COROnWindowView.h */,
 				9FAE735218EE4C5E004CDCA8 /* COROnWindowView.m */,
+				9F9E3F8119AC213F0050EEE6 /* CORRefreshControl.h */,
+				9F9E3F8219AC213F0050EEE6 /* CORRefreshControl.m */,
 				9F9B1D741911D2F80047341B /* CORPagingScrollView.h */,
 				9F9B1D751911D2F80047341B /* CORPagingScrollView.m */,
 				9F48FA71191231F000EA1498 /* CORScrollMenuBar.h */,
@@ -467,6 +472,7 @@
 				9FAE736218EE4C5E004CDCA8 /* CORNavigationButton.m in Sources */,
 				9F516AC81921BBEF00550E7B /* NSDictionary+NullReplace.m in Sources */,
 				9F516ACB1921BFDF00550E7B /* UIScrollView+Touch.m in Sources */,
+				9F9E3F8319AC213F0050EEE6 /* CORRefreshControl.m in Sources */,
 				9FAE736118EE4C5E004CDCA8 /* CORDefaultCell.m in Sources */,
 				9FAE735818EE4C5E004CDCA8 /* UIDevice+Util.m in Sources */,
 				9FD8DAE81915F9B200FABB64 /* CKSTutorialViewController.m in Sources */,

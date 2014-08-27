@@ -23,8 +23,8 @@
 // string with format
 #define NSPRINTF(f, ...) [NSString stringWithFormat:f, __VA_ARGS__]
 
-// get weak reference of self by SELF
-#define PREPARE_SELF __weak typeof(self) SELF = self
+// get weak reference of self by weakSelf
+#define PrepareWeakSelf __weak typeof(self) weakSelf = self
 
 // shows reference count on console
 #define LogReferenceCount(obj) NSLog(@"[%@] reference count = %ld", [obj class], CFGetRetainCount((__bridge void*)obj))

@@ -112,15 +112,15 @@
 
 - (void)scrollView:(CORPagingScrollView *)scrollView didMoveToPageAt:(NSInteger)pageIndex
 {
-    LOG(@"page index %d", pageIndex);
+    LOG(@"page index %ld", (long)pageIndex);
     [_menuBar moveToButtonAtIndex:pageIndex];
 }
 
 #pragma mark - CORScrollMenuBarDelegate
 
-- (void)scrollMenuBar:(CORPagingScrollView *)scrollMenuBar didTapButtonAtIndex:(NSInteger)index
+- (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didTapButtonAtIndex:(NSInteger)index
 {
-    LOG(@"index : %d", index);
+    LOG(@"index : %ld", (long)index);
 }
 
 - (void)scrollMenuBar:(CORScrollMenuBar *)scrollMenuBar didTapButton:(UIButton *)button

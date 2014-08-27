@@ -15,9 +15,6 @@
 
 @implementation CORPagingScrollView
 {
-    UIScrollView *_scrollView;
-    NSArray *_pages;
-    NSInteger _currentIndex;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -48,13 +45,14 @@
 {
     _currentIndex = 0;
     
-    _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
-    _scrollView.pagingEnabled = YES;
-    _scrollView.clipsToBounds = NO;
-    _scrollView.showsHorizontalScrollIndicator = NO;
-    _scrollView.showsVerticalScrollIndicator = NO;
-    _scrollView.delegate = self;
-    [self addSubview:_scrollView];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+    scrollView.pagingEnabled = YES;
+    scrollView.clipsToBounds = NO;
+    scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.delegate = self;
+    [self addSubview:scrollView];
+    _scrollView = scrollView;
 }
 
 /**
@@ -166,8 +164,14 @@
     _currentIndex = pageIndex; // set index
     
     if (_loopEnabled) {
+        
         // rearrange
         [self rearrangePages];
+        
+    } else {
+        
+        // just move
+        [_scrollView setContentOffset:CGPointMake(self.width * pageIndex, 0.f)];
     }
 }
 

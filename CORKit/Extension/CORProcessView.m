@@ -152,7 +152,7 @@ NSString *const kCORProcessAnimation = @"kCORProcessAnimation";
     if (_keyTimes == nil)
         return;
     
-    for (int i = 0, length = _keyTimes.count; i < length; i++) {
+    for (NSInteger i = 0, length = _keyTimes.count; i < length; i++) {
         
         NSTimeInterval time = [[_keyTimes objectAtIndex:i] doubleValue];
         [self performSelector:@selector(process) withObject:nil afterDelay:time];

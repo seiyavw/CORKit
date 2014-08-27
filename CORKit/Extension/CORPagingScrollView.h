@@ -19,6 +19,9 @@ typedef NS_ENUM(NSUInteger, CORPagingScrollDirection) {
 @interface CORPagingScrollView : UIView <UIScrollViewDelegate>
 
 @property (nonatomic, assign) BOOL loopEnabled;
+@property (nonatomic, weak, readonly) UIScrollView *scrollView;
+@property (nonatomic, readonly) NSArray *pages;
+@property (nonatomic, readonly) NSInteger currentIndex;
 @property (nonatomic, weak) id <CORPagingScrollViewDelegate> delegate;
 
 - (void)addPages:(NSArray *)pages;

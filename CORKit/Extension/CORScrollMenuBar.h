@@ -15,10 +15,14 @@
 @property (nonatomic) BOOL loopEnabled;
 @property (nonatomic) CGFloat vertialMargin;
 @property (nonatomic) CGFloat horizontalMargin;
+@property (nonatomic, weak, readonly) UIScrollView *scrollView;
+@property (nonatomic, readonly) NSInteger currentIndex;
+@property (nonatomic, readonly) NSArray *buttons;
 @property (nonatomic, weak) id <CORScrollMenuBarDelegate> delegate;
 
 - (void)addButtons:(NSArray *)buttons;
 - (void)moveToButtonAtIndex:(NSInteger)buttonIndex;
+- (void)setButtonSelectedAtIndex:(NSInteger)index;
 
 @end
 
